@@ -6,7 +6,6 @@ import gsap from 'gsap'
 import { X } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
-import ThemeToggle from '@/components/ui/ThemeToggle'
 import {
   Backdrop,
   Drawer,
@@ -103,7 +102,6 @@ export default function MobileNav({ open, onClose, links, isActive }) {
         </NavList>
         <Footer>
           <LanguageSwitcher />
-          <ThemeToggle />
         </Footer>
       </Drawer>
     </>

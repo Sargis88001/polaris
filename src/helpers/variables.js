@@ -88,8 +88,8 @@ const Variables = createGlobalStyle`
     --containerPadding: 24px;
     --gutter: 24px;
     --sectionDistance: 96px;
-    --headerHeight: 88px;
-    --header-h: 88px;
+    --headerHeight: 96px;
+    --header-h: 96px;
     --maxContent: 1280px;
     --content-narrow: 720px;
     --content-default: 1080px;
@@ -149,8 +149,8 @@ const Variables = createGlobalStyle`
       --containerPadding: 20px;
       --gutter: 20px;
       --sectionDistance: 72px;
-      --headerHeight: 76px;
-      --header-h: 76px;
+      --headerHeight: 80px;
+      --header-h: 80px;
       --p1: 18px;
       --p2: 17px;
       --p3: 15px;
@@ -176,8 +176,8 @@ const Variables = createGlobalStyle`
       --containerPadding: 16px;
       --gutter: 14px;
       --sectionDistance: 48px;
-      --headerHeight: 64px;
-      --header-h: 64px;
+      --headerHeight: 68px;
+      --header-h: 68px;
       --p1: 17px;
       --p2: 16px;
       --p3: 15px;

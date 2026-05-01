@@ -38,7 +38,7 @@ export const LogoLink = styled.div`
     gap: var(--sp3x);
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: var(--p1);
+    font-size: 22px;
     letter-spacing: -0.01em;
     color: var(--color-text);
   }
@@ -48,8 +48,8 @@ export const LogoLink = styled.div`
   }
 
   svg {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
   }
 `
 
@@ -66,8 +66,8 @@ export const Nav = styled.nav`
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
-  gap: var(--sp2x);
-  padding: 6px;
+  gap: var(--sp3x);
+  padding: 8px;
   margin: 0;
   list-style: none;
   background: var(--color-surface);
@@ -79,11 +79,12 @@ export const NavList = styled.ul`
 export const NavLink = styled.span`
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: var(--radius-full);
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: var(--p3);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.01em;
   color: var(--color-text-muted);
   cursor: pointer;
   transition: background var(--trTimeFast) var(--easeOut),
@@ -112,8 +113,8 @@ export const Actions = styled.div`
 
 export const HamburgerButton = styled.button`
   display: none;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);
@@ -131,10 +132,113 @@ export const HamburgerButton = styled.button`
   }
 `
 
+export const DropdownWrapper = styled.li`
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+`
+
+export const DropdownTrigger = styled.button`
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background var(--trTimeFast) var(--easeOut),
+              color var(--trTimeFast) var(--easeOut);
+
+  svg {
+    transition: transform var(--trTimeFast) var(--easeOut);
+  }
+
+  &[data-open='true'] svg {
+    transform: rotate(180deg);
+  }
+
+  ${({ $active }) =>
+    $active &&
+    css`
+      background: var(--color-primary);
+      color: var(--white);
+      box-shadow: var(--shadow-sm);
+    `}
+
+  &:hover {
+    color: ${({ $active }) => ($active ? 'var(--white)' : 'var(--color-text)')};
+    background: ${({ $active }) =>
+      $active ? 'var(--color-primary-hover)' : 'var(--color-surface-offset)'};
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+`
+
+export const DropdownPanel = styled.div`
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 220px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--sp2x);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 60;
+`
+
+export const DropdownItem = styled.a`
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: var(--p3);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: background var(--trTimeFast) var(--easeOut),
+              color var(--trTimeFast) var(--easeOut);
+
+  &:hover {
+    background: var(--color-surface-offset);
+    color: var(--color-text);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  ${({ $active }) =>
+    $active &&
+    css`
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+
+      &:hover {
+        background: var(--color-primary-soft);
+        color: var(--color-primary);
+      }
+    `}
+`
+
 export const DesktopOnly = styled.div`
   display: flex;
   align-items: center;
-  gap: var(--sp3x);
+  gap: var(--sp4x);
 
   ${theme.mediaQuery.tabletSize} {
     display: none;
