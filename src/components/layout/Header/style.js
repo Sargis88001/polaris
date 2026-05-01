@@ -5,15 +5,18 @@ export const HeaderRoot = styled.header`
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--surface);
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
   border-bottom: 1px solid transparent;
   transition: background var(--trTimeFast) var(--easeOut),
               border-color var(--trTimeFast) var(--easeOut),
-              box-shadow var(--trTimeFast) var(--easeOut);
+              box-shadow var(--trTimeFast) var(--easeOut),
+              height var(--trTimeFast) var(--easeOut);
 
   &.scrolled {
-    background: var(--surface);
-    border-bottom-color: var(--border);
+    background: color-mix(in srgb, var(--color-surface) 95%, transparent);
+    border-bottom-color: var(--color-border);
     box-shadow: var(--shadow-sm);
   }
 `
@@ -27,6 +30,11 @@ export const Inner = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: var(--sp6x);
+  transition: height var(--trTimeFast) var(--easeOut);
+
+  .scrolled & {
+    height: calc(var(--headerHeight) - 8px);
+  }
 `
 
 export const LogoLink = styled.div`
@@ -34,16 +42,20 @@ export const LogoLink = styled.div`
     display: inline-flex;
     align-items: center;
     gap: var(--sp2x);
-    font-family: 'Cabinet Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: var(--p1);
     letter-spacing: -0.01em;
-    color: var(--textColor);
+    color: var(--color-text);
+  }
+
+  a:hover {
+    color: var(--color-primary);
   }
 
   svg {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
   }
 `
 
@@ -64,20 +76,21 @@ export const NavList = styled.ul`
   padding: 4px;
   margin: 0;
   list-style: none;
-  background: var(--surfaceAlt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
 `
 
 export const NavLink = styled.span`
   display: inline-flex;
   align-items: center;
   padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  font-family: 'Cabinet Grotesk', 'Satoshi', sans-serif;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
   font-weight: 500;
   font-size: var(--p4);
-  color: var(--textMuted);
+  color: var(--color-text-muted);
   cursor: pointer;
   transition: background var(--trTimeFast) var(--easeOut),
               color var(--trTimeFast) var(--easeOut);
@@ -85,13 +98,15 @@ export const NavLink = styled.span`
   ${({ $active }) =>
     $active &&
     css`
-      background: var(--surface);
-      color: var(--textColor);
+      background: var(--color-primary);
+      color: var(--white);
       box-shadow: var(--shadow-sm);
     `}
 
   &:hover {
-    color: var(--textColor);
+    color: ${({ $active }) => ($active ? 'var(--white)' : 'var(--color-text)')};
+    background: ${({ $active }) =>
+      $active ? 'var(--color-primary-hover)' : 'var(--color-surface-offset)'};
   }
 `
 
@@ -107,10 +122,15 @@ export const HamburgerButton = styled.button`
   height: 44px;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-pill);
-  background: var(--surfaceAlt);
-  border: 1px solid var(--border);
-  color: var(--textColor);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
 
   ${theme.mediaQuery.tabletSize} {
     display: inline-flex;

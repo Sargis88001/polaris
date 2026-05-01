@@ -6,12 +6,14 @@ export const StyledCard = styled.article`
   display: flex;
   flex-direction: column;
   gap: var(--sp4x);
-  background: var(--surfaceAlt);
-  border: 1px solid var(--border);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--sp8x);
+  box-shadow: var(--shadow-sm);
   transition: transform var(--trTime) var(--easeOut),
-              box-shadow var(--trTime) var(--easeOut);
+              box-shadow var(--trTime) var(--easeOut),
+              border-color var(--trTime) var(--easeOut);
 
   ${({ $hoverable }) =>
     $hoverable &&
@@ -19,6 +21,7 @@ export const StyledCard = styled.article`
       &:hover {
         transform: translateY(-4px);
         box-shadow: var(--shadow-md);
+        border-color: var(--color-border-strong);
       }
     `}
 
@@ -31,7 +34,7 @@ export const CardKicker = styled.span`
   font-size: var(--p5);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--primaryColor);
+  color: var(--color-primary);
   font-weight: 600;
 `
 
@@ -41,7 +44,7 @@ export const CardTitle = styled.h3`
 `
 
 export const CardText = styled.p`
-  color: var(--textMuted);
+  color: var(--color-text-muted);
   margin-bottom: 0;
 `
 
@@ -51,7 +54,11 @@ export const CardImageWrap = styled.div`
   aspect-ratio: 16 / 10;
   border-radius: var(--radius-md);
   overflow: hidden;
-  background: var(--border);
+  background: var(--color-surface-offset);
 
-  img { width: 100%; height: 100%; object-fit: cover; }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `

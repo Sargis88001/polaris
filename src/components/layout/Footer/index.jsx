@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { FooterRoot, Inner, Top, Brand, Col, Bottom, ContactLine } from './style.js'
+import { FooterRoot, Inner, Top, Brand, Col, Bottom, ContactLine, BrandAccent } from './style.js'
 
 const programLinks = [
   { href: '/gymnastics', key: 'gymnastics' },
@@ -26,14 +26,12 @@ const resourceLinks = [
 function FooterMark() {
   return (
     <svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
-      <rect x="2" y="2" width="32" height="32" rx="8" fill="#1f2a55" />
+      <rect x="2" y="2" width="32" height="32" rx="8" fill="#342d8b" />
       <path
-        d="M12 10h7.5a4.5 4.5 0 010 9H12V10zm0 9h8a4.5 4.5 0 010 9h-8v-9z"
-        stroke="#f7f2e7"
-        strokeWidth="2"
-        strokeLinejoin="round"
+        d="M18 8 L20 16 L28 18 L20 20 L18 28 L16 20 L8 18 L16 16 Z"
+        fill="#ffffff"
       />
-      <circle cx="26" cy="9" r="2" fill="#e0834c" />
+      <circle cx="27" cy="9" r="1.8" fill="#ffffff" opacity="0.9" />
     </svg>
   )
 }
@@ -44,11 +42,12 @@ export default function Footer() {
 
   return (
     <FooterRoot>
+      <BrandAccent aria-hidden="true" />
       <Inner>
         <Top>
           <Brand>
             <FooterMark />
-            <strong>BrightPath Academy</strong>
+            <strong>Polaris Center</strong>
             <p>{t('footer.tagline')}</p>
             <ContactLine>
               {t('footer.address')}
@@ -95,7 +94,7 @@ export default function Footer() {
 
         <Bottom>
           <span>
-            © {year} BrightPath Academy · {t('footer.rights')}
+            © {year} Polaris Center · {t('footer.rights')}
           </span>
           <span>{t('common.yerevan')}</span>
         </Bottom>

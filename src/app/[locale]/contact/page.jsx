@@ -53,7 +53,7 @@ export default async function ContactPage({ params }) {
                 <InfoIcon><Mail size={18} /></InfoIcon>
                 <div>
                   <h4>{tInfo('emailTitle')}</h4>
-                  <a href="mailto:hello@brightpath.am">hello@brightpath.am</a>
+                  <a href="mailto:hello@polaris.am">hello@polaris.am</a>
                 </div>
               </InfoCard>
               <InfoCard>

@@ -1,27 +1,61 @@
+// Polaris Center brand palette
+// Primary brand color: #342d8b (deep indigo/violet)
+// Text on brand color: white (#ffffff)
 export const colors = {
-  primaryColor: '#1f2a55',
-  primaryColorHover: '#2c3a73',
-  accentColor: '#e0834c',
-  accentColorHover: '#d2723b',
-  surface: '#f7f2e7',
-  surfaceAlt: '#fbf7ec',
-  surfaceDark: '#14151c',
-  surfaceAltDark: '#1a1c25',
-  textColor: '#1c1d24',
-  textMuted: '#5a5d6c',
-  textDark: '#f0ecde',
-  textMutedDark: '#a3a4b0',
-  border: '#e6dcc4',
-  borderDark: '#2a2c38',
+  // Primary (light mode)
+  primaryColor: '#342d8b',
+  primaryColorHover: '#2a2470',
+  primaryColorActive: '#1f1a55',
+  primaryHighlight: '#e8e7f5',
+  primarySoft: '#e8e7f5',
+
+  // Primary (dark mode)
+  primaryColorDark: '#6c63d4',
+  primaryColorHoverDark: '#8178dc',
+  primaryColorActiveDark: '#9991e4',
+  primarySoftDark: '#241f4d',
+
+  // Surfaces - warm white/off-white neutrals (NOT blue-tinted) - light
+  bg: '#f7f7f9',
+  surface: '#ffffff',
+  surfaceAlt: '#f7f7f9',
+  surfaceOffset: '#f0f0f4',
+
+  // Surfaces - dark
+  bgDark: '#0f0e1a',
+  surfaceDark: '#16152a',
+  surfaceAltDark: '#1e1c36',
+  surfaceOffsetDark: '#23213f',
+
+  // Text - light
+  textColor: '#1a1a2e',
+  textMuted: '#6b6b8a',
+  textFaint: '#b0b0c8',
+  textInverse: '#ffffff',
+
+  // Text - dark
+  textDark: '#e8e8f5',
+  textMutedDark: '#9090b8',
+  textFaintDark: '#5e5e7a',
+  textInverseDark: '#0f0e1a',
+
+  // Borders
+  border: '#e3e3ec',
+  borderStrong: '#cdcdd9',
+  borderDark: '#2a2845',
+  borderStrongDark: '#3a3858',
+
+  // Neutrals
   white: '#ffffff',
-  black: '#0c0d12',
-  success: '#3a8a5b',
-  error: '#c84b3a',
+  black: '#0a0a14',
+
+  // Status
+  success: '#2f7a4d',
+  error: '#b3304a',
+  warning: '#b8841a',
 }
 
 // Pixel widths used to build min/max media queries.
-// Each "size" key has a max-width media query (mobile-first negative direction)
-// and each "sizeMin" key has a min-width media query.
 const sizes = {
   desktopSizeXL: 1920,
   desktopSizeL: 1680,

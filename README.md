@@ -1,6 +1,6 @@
-# BrightPath Academy
+# Polaris Center
 
-Production Next.js 15 site for BrightPath Academy, a children's educational and activity center in Yerevan. Built with the App Router, Styled Components, next-intl (en, ru, hy), and a custom Express server for production.
+Production Next.js 15 site for Polaris Center, a children's educational and activity center in Yerevan. Built with the App Router, Styled Components, and next-intl (en, ru, hy). Designed to run on a self-hosted Linux server (Lumadock) with `next start`.
 
 ## Tech stack
 
@@ -10,7 +10,7 @@ Production Next.js 15 site for BrightPath Academy, a children's educational and 
 - next-intl for routing and translations across `en`, `ru`, `hy` (default `hy`)
 - GSAP + @gsap/react for animation
 - Lucide React icons
-- Express custom server with compression and security headers
+- Native Next.js production server (`next start`) with security headers configured in `next.config.js`
 - ESLint with `next/core-web-vitals`
 - Node 20+, npm
 
@@ -39,29 +39,29 @@ Copy `.env.example` to `.env.local` and adjust as needed.
 
 | Variable          | Purpose                                                            | Example                       |
 | ----------------- | ------------------------------------------------------------------ | ----------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL used in metadata and `alternates`.         | `https://brightpath.am`       |
-| `PORT`            | Port the Express server listens on. Defaults to `3000`.            | `3000`                        |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL used in metadata and `alternates`.         | `https://polaris.am`          |
+| `PORT`            | Port the Next server listens on. Defaults to `3000`.               | `3000`                        |
 | `SMTP_HOST`       | SMTP host for the contact form (when nodemailer is wired).         | `smtp.eu.example.com`         |
 | `SMTP_PORT`       | SMTP port.                                                         | `587`                         |
-| `SMTP_USER`       | SMTP user.                                                         | `notifications@brightpath.am` |
+| `SMTP_USER`       | SMTP user.                                                         | `notifications@polaris.am`    |
 | `SMTP_PASS`       | SMTP password.                                                     | `change-me`                   |
-| `CONTACT_TO`      | Recipient address for contact form submissions.                    | `hello@brightpath.am`         |
+| `CONTACT_TO`      | Recipient address for contact form submissions.                    | `hello@polaris.am`            |
 
 The contact API currently logs submissions and returns `{ success: true }`. Wire the SMTP variables into a nodemailer transporter inside `src/app/api/contact/route.js` to enable real email delivery.
 
 ## Folder structure
 
 ```
-brightpath-center/
+polaris-center/
   middleware.js              # next-intl locale routing only
-  next.config.js
-  server.js                  # Express custom server for production
+  next.config.js             # Next config + security headers
   public/
     fonts/font.css           # Fontshare imports (Cabinet Grotesk + Satoshi)
     images/                  # Hero, gallery, blog cover images
     favicon.svg
   src/
     app/
+      globals.css            # Brand tokens, base reset, theme variables
       layout.jsx             # Root layout, metadata template
       page.jsx               # Redirects / to /{defaultLocale}
       api/contact/route.js   # POST handler for the contact form
@@ -92,7 +92,7 @@ brightpath-center/
   .github/workflows/ci.yml
 ```
 
-Every component lives in its own folder with `index.jsx` (and `'use client'` when needed) plus a `style.js` exporting named styled components. There are no CSS modules and no plain CSS files outside `public/fonts/font.css`.
+Every component lives in its own folder with `index.jsx` (and `'use client'` when needed) plus a `style.js` exporting named styled components.
 
 ## Pages
 
@@ -128,7 +128,6 @@ The locale list, default locale, and locale labels live in `src/i18n/config.js`.
 2. Append an entry with a unique kebab-case `slug`, a cover image path under `/images/`, an ISO date, a category key, and `body` arrays per locale.
 3. Add a translated `title` and `excerpt` per locale on the same entry.
 4. Drop the cover image into `public/images/`.
-5. The blog index lists posts sorted by date descending. The `[slug]` route uses `generateStaticParams` across locales and slugs.
 
 ## Adding a program
 
@@ -138,18 +137,21 @@ The locale list, default locale, and locale labels live in `src/i18n/config.js`.
 
 ## Theming
 
-Light is the default theme. Dark theme is opt-in by setting `data-theme="dark"` on `<html>` or `<body>`. The `ThemeToggle` component reads the user's `prefers-color-scheme` on first render and toggles the attribute. CSS custom properties live in `src/helpers/variables.js`; dark overrides live in the `[data-theme='dark']` block.
+Light is the default theme. Dark theme is opt-in by setting `data-theme="dark"` on `<html>` or `<body>`. The `ThemeToggle` component reads the user's `prefers-color-scheme` on first render and toggles the attribute. CSS custom properties live in `src/app/globals.css` and are mirrored as styled-components tokens in `src/helpers/variables.js`; dark overrides live in the `[data-theme='dark']` block.
 
 Brand tokens live in `src/helpers/theme.js`:
 
-- `primaryColor` `#1f2a55` deep indigo
-- `accentColor` `#e0834c` warm coral
-- `surface` `#f7f2e7` warm cream
-- `surfaceDark` `#14151c`
+- `primaryColor` `#342d8b` deep indigo / violet (Polaris primary)
+- `primaryColorHover` `#2a2470`
+- `primaryColorActive` `#1f1a55`
+- `bg` `#f7f7f9` warm off-white surface
+- `surface` `#ffffff`
+- White (`#ffffff`) is used as text on every primary-colored surface.
+- Primary color is reserved for CTA buttons, active nav links, badges, focus rings, and key highlights only. All other surfaces and text are neutral.
 
 ## Deployment
 
-### VPS with the Express server
+### Self-hosted Linux (Lumadock)
 
 ```bash
 npm ci
@@ -157,11 +159,7 @@ npm run build
 NODE_ENV=production PORT=3000 npm start
 ```
 
-Front the Express server with nginx or Caddy and terminate TLS at the proxy. The server applies HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy headers.
-
-### Vercel
-
-Vercel ignores `server.js`. Deploy the repo as-is; Vercel detects Next.js automatically. Set `NEXT_PUBLIC_SITE_URL` in the project settings.
+`npm start` runs `next start`, the standard Next.js production server. Front it with nginx or Caddy and terminate TLS at the proxy. Security headers (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-XSS-Protection) are applied via `next.config.js` `headers()` and so travel with every response.
 
 ## Conventions
 
@@ -179,4 +177,4 @@ Vercel ignores `server.js`. Deploy the repo as-is; Vercel detects Next.js automa
 
 ## License
 
-Proprietary. All rights reserved by BrightPath Academy.
+Proprietary. All rights reserved by Polaris Center.

@@ -1,10 +1,11 @@
 import React from 'react'
+import './globals.css'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'BrightPath Academy',
-    template: '%s | BrightPath Academy',
+    default: 'Polaris Center',
+    template: '%s | Polaris Center',
   },
   description:
     "A modern children's educational and activity center in Yerevan, ages 3 to 16. Gymnastics, English, theatre, robotics, and creative development.",
@@ -13,7 +14,7 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: 'BrightPath Academy',
+    siteName: 'Polaris Center',
     images: ['/images/hero-home.png'],
   },
   twitter: {
@@ -22,7 +23,7 @@ export const metadata = {
 }
 
 export const viewport = {
-  themeColor: '#1f2a55',
+  themeColor: '#342d8b',
   width: 'device-width',
   initialScale: 1,
 }

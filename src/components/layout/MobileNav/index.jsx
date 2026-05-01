@@ -89,7 +89,7 @@ export default function MobileNav({ open, onClose, links, isActive }) {
         aria-hidden={!open}
       >
         <DrawerHeader>
-          <strong>BrightPath</strong>
+          <strong>Polaris</strong>
           <CloseButton type="button" onClick={onClose} aria-label={t('closeMenu')}>
             <X size={20} />
           </CloseButton>

@@ -16,7 +16,7 @@ const items = [
   },
   {
     quote:
-      'Real teachers, real progress, and a building that feels like a home. We have recommended BrightPath to half the parents we know.',
+      'Real teachers, real progress, and a building that feels like a home. We have recommended Polaris to half the parents we know.',
     author: 'David K., parent',
   },
   {

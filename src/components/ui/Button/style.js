@@ -2,25 +2,51 @@ import styled, { css } from 'styled-components'
 
 const variantStyles = {
   primary: css`
-    background: var(--primaryColor);
+    background: var(--color-primary);
     color: var(--white);
-    &:hover { background: var(--primaryColorHover); }
+    border-color: var(--color-primary);
+
+    &:hover {
+      background: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+      color: var(--white);
+    }
+
+    &:active {
+      background: var(--color-primary-active);
+      border-color: var(--color-primary-active);
+    }
   `,
   accent: css`
-    background: var(--accentColor);
+    background: var(--color-primary);
     color: var(--white);
-    &:hover { background: var(--accentColorHover); }
+    border-color: var(--color-primary);
+
+    &:hover {
+      background: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+    }
   `,
   outline: css`
     background: transparent;
-    color: var(--textColor);
-    border: 1px solid var(--border);
-    &:hover { border-color: var(--primaryColor); color: var(--primaryColor); }
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+
+    &:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      background: var(--color-primary-highlight);
+    }
   `,
   ghost: css`
     background: transparent;
-    color: var(--textColor);
-    &:hover { background: var(--surfaceAlt); }
+    color: var(--color-text);
+    border-color: transparent;
+
+    &:hover {
+      background: var(--color-surface-offset);
+      color: var(--color-text);
+    }
   `,
 }
 
@@ -47,8 +73,8 @@ export const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: var(--sp2x);
-  border-radius: var(--radius-pill);
-  font-family: 'Cabinet Grotesk', 'Satoshi', system-ui, sans-serif;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.005em;
   white-space: nowrap;
@@ -57,14 +83,17 @@ export const StyledButton = styled.button`
   transition: background var(--trTimeFast) var(--easeOut),
               color var(--trTimeFast) var(--easeOut),
               border-color var(--trTimeFast) var(--easeOut),
-              transform var(--trTimeFast) var(--easeOut);
+              transform var(--trTimeFast) var(--easeOut),
+              box-shadow var(--trTimeFast) var(--easeOut);
 
   &:focus-visible {
-    outline: 2px solid var(--primaryColor);
+    outline: 2px solid var(--color-primary);
     outline-offset: 3px;
   }
 
-  &:active { transform: translateY(1px); }
+  &:active {
+    transform: translateY(1px);
+  }
 
   &:disabled {
     opacity: 0.5;
@@ -72,7 +101,7 @@ export const StyledButton = styled.button`
     transform: none;
   }
 
-  ${({ $variant = 'primary' }) => variantStyles[$variant]}
-  ${({ $size = 'md' }) => sizeStyles[$size]}
+  ${({ $variant = 'primary' }) => variantStyles[$variant] || variantStyles.primary}
+  ${({ $size = 'md' }) => sizeStyles[$size] || sizeStyles.md}
   ${({ $fullWidth }) => $fullWidth && css`width: 100%;`}
 `

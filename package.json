@@ -1,22 +1,19 @@
 {
-  "name": "brightpath-center",
+  "name": "polaris-center",
   "version": "1.0.0",
   "private": true,
-  "description": "BrightPath Academy - children's educational and activity center in Yerevan.",
+  "description": "Polaris Center - children's educational and activity center in Yerevan.",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "start:next": "next start -p 3000",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
-    "compression": "^1.7.4",
-    "express": "^4.19.2",
     "gsap": "^3.12.5",
     "lucide-react": "^0.453.0",
     "next": "^15.5.15",

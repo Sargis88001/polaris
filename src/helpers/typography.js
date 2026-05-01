@@ -3,33 +3,43 @@
 import { createGlobalStyle } from 'styled-components'
 
 const Typography = createGlobalStyle`
-  *, *::before, *::after { box-sizing: border-box; }
-
-  html, body {
+  *, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: var(--surface);
-    color: var(--textColor);
-    font-family: 'Satoshi', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    font-size: var(--p3);
-    line-height: 1.55;
+  }
+
+  html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h, 72px);
+  }
+
+  html, body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
     transition: background var(--trTime) var(--easeOut), color var(--trTime) var(--easeOut);
   }
 
   body {
-    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Cabinet Grotesk', 'Satoshi', system-ui, sans-serif;
+    font-family: var(--font-display);
     margin: 0 0 var(--sp4x);
-    color: var(--textColor);
+    color: var(--color-text);
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.08;
+    line-height: 1.1;
+    text-wrap: balance;
   }
 
   h1, .h1 { font-size: var(--h1); line-height: 1.02; letter-spacing: -0.025em; }
@@ -41,8 +51,9 @@ const Typography = createGlobalStyle`
 
   p, .p1, .p2, .p3, .p4, .p5 {
     margin: 0 0 var(--sp4x);
-    font-family: 'Satoshi', system-ui, sans-serif;
-    color: var(--textColor);
+    font-family: var(--font-body);
+    color: var(--color-text);
+    text-wrap: pretty;
   }
 
   .p1 { font-size: var(--p1); line-height: 1.55; }
@@ -56,9 +67,17 @@ const Typography = createGlobalStyle`
     text-decoration: none;
     transition: color var(--trTimeFast) var(--easeOut), opacity var(--trTimeFast) var(--easeOut);
   }
-  a:hover { color: var(--primaryColor); }
+  a:hover { color: var(--color-primary); }
 
-  img, svg, video { display: block; max-width: 100%; height: auto; }
+  img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
 
   button {
     font-family: inherit;
@@ -69,22 +88,50 @@ const Typography = createGlobalStyle`
     padding: 0;
   }
 
-  ul, ol { margin: 0 0 var(--sp4x); padding: 0 0 0 var(--sp5x); }
-  li { margin-bottom: var(--sp1x); }
-
-  input, textarea, select {
+  input, textarea, select, button {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
   }
 
-  ::selection { background: var(--primaryColor); color: var(--white); }
+  a, button, [role='button'], input, textarea, select {
+    transition:
+      color var(--transition-interactive),
+      background var(--transition-interactive),
+      border-color var(--transition-interactive),
+      box-shadow var(--transition-interactive),
+      transform var(--transition-interactive);
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  .sr-only,
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
-      animation-duration: 0.001ms !important;
+      animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important;
+      transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
   }
