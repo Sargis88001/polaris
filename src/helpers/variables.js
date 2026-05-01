@@ -20,7 +20,7 @@ const Variables = createGlobalStyle`
     --accentColor: ${theme.colors.primaryColor};
     --accentColorHover: ${theme.colors.primaryColorHover};
 
-    /* Surfaces (warm-neutral, not blue tinted) */
+    /* Surfaces (warm-neutral) */
     --color-bg: ${theme.colors.bg};
     --color-surface: ${theme.colors.surface};
     --color-surface-2: ${theme.colors.surfaceAlt};
@@ -88,8 +88,8 @@ const Variables = createGlobalStyle`
     --containerPadding: 24px;
     --gutter: 24px;
     --sectionDistance: 96px;
-    --headerHeight: 72px;
-    --header-h: 72px;
+    --headerHeight: 88px;
+    --header-h: 88px;
     --maxContent: 1280px;
     --content-narrow: 720px;
     --content-default: 1080px;
@@ -110,7 +110,7 @@ const Variables = createGlobalStyle`
     --radius-pill: 999px;
     --radius-full: 9999px;
 
-    /* Type scale (fluid) - ported from index.html */
+    /* Type scale (fluid) */
     --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
     --text-sm: clamp(0.875rem, 0.82rem + 0.3vw, 1rem);
     --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
@@ -142,60 +142,15 @@ const Variables = createGlobalStyle`
     --shadow-lg: 0 18px 40px rgba(26, 26, 46, 0.12);
   }
 
-  /* Dark theme overrides */
-  [data-theme='dark'] {
-    --color-primary: ${theme.colors.primaryColorDark};
-    --color-primary-hover: ${theme.colors.primaryColorHoverDark};
-    --color-primary-active: ${theme.colors.primaryColorActiveDark};
-    --color-primary-highlight: ${theme.colors.primarySoftDark};
-    --color-primary-soft: ${theme.colors.primarySoftDark};
-
-    --primaryColor: ${theme.colors.primaryColorDark};
-    --primaryColorHover: ${theme.colors.primaryColorHoverDark};
-    --primaryColorActive: ${theme.colors.primaryColorActiveDark};
-    --accentColor: ${theme.colors.primaryColorDark};
-    --accentColorHover: ${theme.colors.primaryColorHoverDark};
-
-    --color-bg: ${theme.colors.bgDark};
-    --color-surface: ${theme.colors.surfaceDark};
-    --color-surface-2: ${theme.colors.surfaceAltDark};
-    --color-surface-offset: ${theme.colors.surfaceOffsetDark};
-
-    --surface: ${theme.colors.surfaceDark};
-    --surfaceAlt: ${theme.colors.surfaceAltDark};
-    --surfaceOffset: ${theme.colors.surfaceOffsetDark};
-    --bg: ${theme.colors.bgDark};
-
-    --color-text: ${theme.colors.textDark};
-    --color-text-muted: ${theme.colors.textMutedDark};
-    --color-text-faint: ${theme.colors.textFaintDark};
-    --color-text-inverse: ${theme.colors.textInverseDark};
-
-    --textColor: ${theme.colors.textDark};
-    --textMuted: ${theme.colors.textMutedDark};
-    --textFaint: ${theme.colors.textFaintDark};
-    --textInverse: ${theme.colors.textInverseDark};
-
-    --color-border: ${theme.colors.borderDark};
-    --color-border-strong: ${theme.colors.borderStrongDark};
-    --border: ${theme.colors.borderDark};
-    --borderStrong: ${theme.colors.borderStrongDark};
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.40);
-    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.55);
-  }
-
   /* Tablet large */
   ${theme.mediaQuery.tabletSize} {
     :root,
-    [data-theme='light'],
-    [data-theme='dark'] {
+    [data-theme='light'] {
       --containerPadding: 20px;
       --gutter: 20px;
       --sectionDistance: 72px;
-      --headerHeight: 64px;
-      --header-h: 64px;
+      --headerHeight: 76px;
+      --header-h: 76px;
       --p1: 18px;
       --p2: 17px;
       --p3: 15px;
@@ -205,24 +160,24 @@ const Variables = createGlobalStyle`
   /* Tablet small */
   ${theme.mediaQuery.tabletSizeM} {
     :root,
-    [data-theme='light'],
-    [data-theme='dark'] {
+    [data-theme='light'] {
       --containerPadding: 16px;
       --gutter: 16px;
       --sectionDistance: 56px;
-      --headerHeight: 60px;
-      --header-h: 60px;
+      --headerHeight: 68px;
+      --header-h: 68px;
     }
   }
 
   /* Mobile */
   ${theme.mediaQuery.mobileSize} {
     :root,
-    [data-theme='light'],
-    [data-theme='dark'] {
+    [data-theme='light'] {
       --containerPadding: 16px;
       --gutter: 14px;
       --sectionDistance: 48px;
+      --headerHeight: 64px;
+      --header-h: 64px;
       --p1: 17px;
       --p2: 16px;
       --p3: 15px;

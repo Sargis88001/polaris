@@ -11,8 +11,7 @@ export const HeaderRoot = styled.header`
   border-bottom: 1px solid transparent;
   transition: background var(--trTimeFast) var(--easeOut),
               border-color var(--trTimeFast) var(--easeOut),
-              box-shadow var(--trTimeFast) var(--easeOut),
-              height var(--trTimeFast) var(--easeOut);
+              box-shadow var(--trTimeFast) var(--easeOut);
 
   &.scrolled {
     background: color-mix(in srgb, var(--color-surface) 95%, transparent);
@@ -30,18 +29,13 @@ export const Inner = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: var(--sp6x);
-  transition: height var(--trTimeFast) var(--easeOut);
-
-  .scrolled & {
-    height: calc(var(--headerHeight) - 8px);
-  }
 `
 
 export const LogoLink = styled.div`
   a {
     display: inline-flex;
     align-items: center;
-    gap: var(--sp2x);
+    gap: var(--sp3x);
     font-family: var(--font-display);
     font-weight: 700;
     font-size: var(--p1);
@@ -54,8 +48,8 @@ export const LogoLink = styled.div`
   }
 
   svg {
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
   }
 `
 
@@ -72,8 +66,8 @@ export const Nav = styled.nav`
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
-  gap: var(--sp1x);
-  padding: 4px;
+  gap: var(--sp2x);
+  padding: 6px;
   margin: 0;
   list-style: none;
   background: var(--color-surface);
@@ -85,11 +79,11 @@ export const NavList = styled.ul`
 export const NavLink = styled.span`
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
+  padding: 10px 20px;
   border-radius: var(--radius-full);
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: var(--p4);
+  font-weight: 600;
+  font-size: var(--p3);
   color: var(--color-text-muted);
   cursor: pointer;
   transition: background var(--trTimeFast) var(--easeOut),
@@ -118,8 +112,8 @@ export const Actions = styled.div`
 
 export const HamburgerButton = styled.button`
   display: none;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);

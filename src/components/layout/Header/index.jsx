@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl'
 import { Menu } from 'lucide-react'
 import { Link, usePathname } from '@/i18n/navigation'
 import Button from '@/components/ui/Button'
-import ThemeToggle from '@/components/ui/ThemeToggle'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
 import MobileNav from '@/components/layout/MobileNav'
 import {
@@ -46,7 +45,6 @@ function PolarisMark() {
   return (
     <svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
       <rect x="2" y="2" width="32" height="32" rx="8" fill="#342d8b" />
-      {/* Polaris star: 4-point star with small accent */}
       <path
         d="M18 8 L20 16 L28 18 L20 20 L18 28 L16 20 L8 18 L16 16 Z"
         fill="#ffffff"
@@ -100,7 +98,6 @@ export default function Header() {
           <Actions>
             <DesktopOnly>
               <LanguageSwitcher />
-              <ThemeToggle />
               <Button href="/contact" $size="sm">
                 {t('enroll')}
               </Button>
@@ -110,7 +107,7 @@ export default function Header() {
               aria-label={t('openMenu')}
               onClick={() => setDrawerOpen(true)}
             >
-              <Menu size={20} />
+              <Menu size={22} />
             </HamburgerButton>
           </Actions>
         </Inner>
