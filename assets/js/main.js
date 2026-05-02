@@ -44,13 +44,15 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobil
 
 // ---- Language switcher ----
 function getLang() {
-  const stored = localStorage.getItem('brightpath_lang');
-  if (stored && typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[stored]) return stored;
+  try {
+    const stored = localStorage.getItem('brightpath_lang');
+    if (stored && typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[stored]) return stored;
+  } catch(e) {}
   return 'en';
 }
 function applyLang(lang) {
   if (typeof TRANSLATIONS === 'undefined' || !TRANSLATIONS[lang]) return;
-  localStorage.setItem('brightpath_lang', lang);
+  try { localStorage.setItem('brightpath_lang', lang); } catch(e) {}
   document.documentElement.setAttribute('lang', lang);
 
   document.querySelectorAll('[data-i18n-template]').forEach((el) => {
@@ -98,8 +100,18 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(e.target);
     }
   });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal, .stagger > *').forEach((el) => revealObserver.observe(el));
+}, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
+
+document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
+  revealObserver.observe(el);
+});
+
+// Fallback: reveal everything after 1 second in case observer fails
+setTimeout(() => {
+  document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
+    el.classList.add('is-visible');
+  });
+}, 1000);
 
 // ---- Contact form validation ----
 const contactForm = document.getElementById('contactForm');
