@@ -797,6 +797,7 @@ button { cursor: pointer; border: none; background: none; }
   transform: translateY(18px);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
+.stagger > .is-visible { opacity: 1; transform: none; }
 .stagger > .is-visible:nth-child(1) { transition-delay: 0ms; }
 .stagger > .is-visible:nth-child(2) { transition-delay: 80ms; }
 .stagger > .is-visible:nth-child(3) { transition-delay: 160ms; }
@@ -923,7 +924,7 @@ button { cursor: pointer; border: none; background: none; }
   margin-top: var(--space-10);
 }
 @media (max-width: 900px) { .outcomes-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .outcomes-grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .outcomes-grid { grid-column: 1fr; } }
 .outcome-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
