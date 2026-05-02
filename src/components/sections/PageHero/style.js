@@ -1,60 +1,82 @@
-import theme from '@/helpers'
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  padding: var(--sp16x) 0 var(--sp10x);
-`
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 0;
+  color: var(--color-text-inverse);
 
-export const Inner = styled.div`
-  max-width: var(--maxContent);
-  margin: 0 auto;
-  padding: 0 var(--containerPadding);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--sp16x);
-  align-items: center;
-
-  ${theme.mediaQuery.tabletSize} {
-    grid-template-columns: 1fr;
-    gap: var(--sp10x);
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      oklch(0.12 0.02 250 / 0.92) 0%,
+      oklch(0.12 0.02 250 / 0.55) 50%,
+      oklch(0.12 0.02 250 / 0.15) 100%
+    );
+    z-index: 1;
   }
 `
 
-export const Kicker = styled.span`
-  display: inline-block;
-  font-size: var(--p4);
+export const Bg = styled.div`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+`
+
+export const Container = styled.div`
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--maxContent, var(--content-wide, 1280px));
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) var(--containerPadding, 1.5rem);
+`
+
+export const Eyebrow = styled.span`
+  display: block;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--primaryColor);
-  font-weight: 600;
-  margin-bottom: var(--sp4x);
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  opacity: 1;
 `
 
 export const Title = styled.h1`
-  font-size: var(--h1);
-  line-height: 1.04;
-  margin-bottom: var(--sp5x);
-  letter-spacing: -0.025em;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  max-width: 700px;
+  margin-bottom: 1.25rem;
+  color: var(--color-text-inverse);
 `
 
 export const Lede = styled.p`
-  font-size: var(--p1);
-  color: var(--textMuted);
-  line-height: 1.55;
-  max-width: 56ch;
-  margin: 0;
-`
-
-export const Visual = styled.div`
-  position: relative;
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--surfaceAlt);
-
-  img { width: 100%; height: 100%; object-fit: cover; }
-
-  ${theme.mediaQuery.tabletSize} {
-    aspect-ratio: 16 / 11;
-  }
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.65;
+  max-width: 520px;
+  opacity: 0.85;
+  color: var(--color-text-inverse);
 `

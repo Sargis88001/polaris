@@ -66,42 +66,41 @@ export const Nav = styled.nav`
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
-  gap: var(--sp3x);
-  padding: 8px;
+  gap: 0.25rem;
+  padding: 0;
   margin: 0;
   list-style: none;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-sm);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 `
 
 export const NavLink = styled.span`
   display: inline-flex;
   align-items: center;
-  padding: 12px 24px;
-  border-radius: var(--radius-full);
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.005em;
   color: var(--color-text-muted);
+  text-decoration: none;
   cursor: pointer;
-  transition: background var(--trTimeFast) var(--easeOut),
-              color var(--trTimeFast) var(--easeOut);
+  transition: background 160ms ease, color 160ms ease;
 
   ${({ $active }) =>
     $active &&
     css`
-      background: var(--color-primary);
-      color: var(--white);
-      box-shadow: var(--shadow-sm);
+      color: var(--color-text);
     `}
 
   &:hover {
-    color: ${({ $active }) => ($active ? 'var(--white)' : 'var(--color-text)')};
-    background: ${({ $active }) =>
-      $active ? 'var(--color-primary-hover)' : 'var(--color-surface-offset)'};
+    color: var(--color-text);
+    background: var(--color-surface-offset);
   }
 `
 
@@ -142,18 +141,17 @@ export const DropdownTrigger = styled.button`
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 12px 24px;
-  border-radius: var(--radius-full);
+  padding: 8px 14px;
+  border-radius: 8px;
   border: none;
   background: transparent;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.01em;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.005em;
   color: var(--color-text-muted);
   cursor: pointer;
-  transition: background var(--trTimeFast) var(--easeOut),
-              color var(--trTimeFast) var(--easeOut);
+  transition: background 160ms ease, color 160ms ease;
 
   svg {
     transition: transform var(--trTimeFast) var(--easeOut);
@@ -166,15 +164,12 @@ export const DropdownTrigger = styled.button`
   ${({ $active }) =>
     $active &&
     css`
-      background: var(--color-primary);
-      color: var(--white);
-      box-shadow: var(--shadow-sm);
+      color: var(--color-text);
     `}
 
   &:hover {
-    color: ${({ $active }) => ($active ? 'var(--white)' : 'var(--color-text)')};
-    background: ${({ $active }) =>
-      $active ? 'var(--color-primary-hover)' : 'var(--color-surface-offset)'};
+    color: var(--color-text);
+    background: var(--color-surface-offset);
   }
 
   &:focus-visible {

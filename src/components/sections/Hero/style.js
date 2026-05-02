@@ -39,17 +39,19 @@ export const Kicker = styled.span`
   }
 `
 
-export const Title = styled.h1`
-  font-family: 'Cabinet Grotesk', sans-serif;
-  font-size: var(--h1);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+export const Title = styled.h1.attrs({ className: 'hero-title' })`
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
   margin-bottom: var(--sp6x);
 
   em {
-    font-family: 'Cabinet Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-style: italic;
-    color: var(--primaryColor);
+    color: var(--color-primary);
   }
 `
 

@@ -4,7 +4,7 @@ import PageHero from '@/components/sections/PageHero'
 import CtaBand from '@/components/sections/CtaBand'
 import { programs } from '@/data/programs'
 import { buildMetadata } from '@/lib/pageMetadata'
-import { PillarsSection, PillarsInner, PillarTitle, PillarsGrid, Pillar } from './style.js'
+
 
 const slug = 'development'
 
@@ -30,19 +30,23 @@ export default async function DevelopmentPage({ params }) {
         image={program.image}
         imageAlt={t('title')}
       />
-      <PillarsSection>
-        <PillarsInner>
-          <PillarTitle>{t('pillarsTitle')}</PillarTitle>
-          <PillarsGrid>
+      <section className="section" style={{ background: 'var(--color-surface-offset)' }}>
+        <div className="container">
+          <div className="reveal" style={{ maxWidth: '60ch' }}>
+            <span className="section-eyebrow">Pillars</span>
+            <h2 className="section-title">{t('pillarsTitle')}</h2>
+          </div>
+          <div className="pillar-grid stagger" style={{ marginTop: 'var(--space-10)' }}>
             {pillars.map((p, i) => (
-              <Pillar key={i}>
+              <article key={i} className="pillar-card">
+                <span className="pillar-card__num">{String(i + 1).padStart(2, '0')}</span>
                 <h3>{p.title}</h3>
                 <p>{p.text}</p>
-              </Pillar>
+              </article>
             ))}
-          </PillarsGrid>
-        </PillarsInner>
-      </PillarsSection>
+          </div>
+        </div>
+      </section>
       <CtaBand namespace="home" titleKey="ctaBandTitle" ledeKey="ctaBandLede" />
     </>
   )

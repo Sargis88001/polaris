@@ -1,28 +1,26 @@
 import React from 'react'
 import Image from 'next/image'
-import { Section, Inner, Kicker, Title, Lede, Visual } from './style.js'
+import { Section, Container, Bg, Eyebrow, Title, Lede } from './style.js'
 
 export default function PageHero({ kicker, title, lede, image, imageAlt }) {
   return (
-    <Section>
-      <Inner>
-        <div>
-          {kicker && <Kicker>{kicker}</Kicker>}
-          <Title>{title}</Title>
-          {lede && <Lede>{lede}</Lede>}
-        </div>
-        {image && (
-          <Visual>
-            <Image
-              src={image}
-              alt={imageAlt || title}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
-          </Visual>
-        )}
-      </Inner>
+    <Section className="page-hero page-hero--full">
+      {image && (
+        <Bg className="page-hero__bg">
+          <Image
+            src={image}
+            alt={imageAlt || title}
+            fill
+            sizes="100vw"
+            priority
+          />
+        </Bg>
+      )}
+      <Container className="container">
+        {kicker && <Eyebrow className="section-eyebrow">{kicker}</Eyebrow>}
+        <Title className="page-hero__title">{title}</Title>
+        {lede && <Lede className="page-hero__lede">{lede}</Lede>}
+      </Container>
     </Section>
   )
 }

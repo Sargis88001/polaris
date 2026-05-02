@@ -7,7 +7,11 @@ import CtaBand from '@/components/sections/CtaBand'
 import { buildMetadata } from '@/lib/pageMetadata'
 
 export async function generateMetadata({ params }) {
-  return buildMetadata({ params, key: 'home' })
+  const meta = await buildMetadata({ params, key: 'home' })
+  return {
+    ...meta,
+    title: "BrightPath Academy - Children's Programs in Yerevan",
+  }
 }
 
 export default async function HomePage({ params }) {

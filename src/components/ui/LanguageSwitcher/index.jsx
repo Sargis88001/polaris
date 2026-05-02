@@ -3,8 +3,8 @@
 import React, { useTransition } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { useRouter, usePathname } from '@/i18n/navigation'
-import { locales, localeLabels, localeNames } from '@/i18n/config'
-import { Switcher, LangButton } from './style.js'
+import { locales, localeLabels } from '@/i18n/config'
+import { LangSelect } from './style.js'
 
 export default function LanguageSwitcher() {
   const t = useTranslations('language')
@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
   const pathname = usePathname()
   const [isPending, startTransition] = useTransition()
 
-  const handleSwitch = (next) => {
+  const switchLang = (next) => {
     if (next === locale) return
     startTransition(() => {
       router.replace(pathname, { locale: next })
@@ -21,20 +21,18 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <Switcher role="group" aria-label={t('label')}>
+    <LangSelect
+      className="lang-select"
+      aria-label={t('label')}
+      value={locale}
+      disabled={isPending}
+      onChange={(e) => switchLang(e.target.value)}
+    >
       {locales.map((loc) => (
-        <LangButton
-          key={loc}
-          type="button"
-          $active={locale === loc}
-          aria-pressed={locale === loc}
-          aria-label={localeNames[loc]}
-          disabled={isPending}
-          onClick={() => handleSwitch(loc)}
-        >
+        <option key={loc} value={loc}>
           {localeLabels[loc]}
-        </LangButton>
+        </option>
       ))}
-    </Switcher>
+    </LangSelect>
   )
 }

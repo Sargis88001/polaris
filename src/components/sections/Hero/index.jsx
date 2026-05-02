@@ -17,9 +17,9 @@ import {
 export default function Hero() {
   const t = useTranslations('home')
   const tCommon = useTranslations('common')
-  const titleTemplate = t('heroTitle')
+  const titleTemplate = t.raw('heroTitle')
   const accent = t('heroAccent')
-  const parts = titleTemplate.split('{accent}')
+  const parts = String(titleTemplate).split('{accent}')
 
   return (
     <HeroSection>

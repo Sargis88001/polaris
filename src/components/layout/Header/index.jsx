@@ -32,8 +32,6 @@ const navLinks = [
   { href: '/theatre', key: 'theatre' },
   { href: '/school-prep', key: 'schoolPrep' },
   { href: '/robotics', key: 'robotics' },
-  { href: '/blog', key: 'blog' },
-  { href: '/faq', key: 'faq' },
   { href: '/contact', key: 'contact' },
 ]
 
@@ -48,10 +46,8 @@ const programLinks = [
 
 const condensedDesktop = [
   { href: '/', key: 'home' },
-  { href: '/about', key: 'about' },
   { type: 'dropdown', key: 'programs' },
-  { href: '/blog', key: 'blog' },
-  { href: '/faq', key: 'faq' },
+  { href: '/about', key: 'about' },
   { href: '/contact', key: 'contact' },
 ]
 
