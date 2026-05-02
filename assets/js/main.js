@@ -93,38 +93,31 @@ const fyEl = document.getElementById('footerYear');
 if (fyEl) fyEl.textContent = new Date().getFullYear();
 
 // ---- Scroll reveal ----
-function markVisible(el) {
-  el.classList.add('is-visible');
+// Fix: reveal all .reveal and .stagger children immediately so nothing stays hidden.
+// lazy-loaded images inside opacity:0 elements are skipped by some browsers,
+// so we must mark visible BEFORE the browser decides not to load the images.
+function revealAll() {
+  document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
+    el.classList.add('is-visible');
+    // Force lazy images inside newly-visible elements to load
+    el.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+      img.loading = 'eager';
+    });
+  });
 }
 
-// Immediately mark everything already in the viewport as visible
-document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
-  const rect = el.getBoundingClientRect();
-  if (rect.top < window.innerHeight) {
-    markVisible(el);
-  }
-});
+// Run immediately (sync) so images are visible before first paint
+revealAll();
 
-// Observer for below-fold elements
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) {
-      markVisible(e.target);
-      revealObserver.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.01, rootMargin: '0px 0px -10px 0px' });
+// Also run after DOMContentLoaded as a safety net
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', revealAll);
+} else {
+  revealAll();
+}
 
-document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
-  if (!el.classList.contains('is-visible')) {
-    revealObserver.observe(el);
-  }
-});
-
-// Hard fallback: reveal everything after 800ms no matter what
-setTimeout(() => {
-  document.querySelectorAll('.reveal, .stagger > *').forEach(markVisible);
-}, 800);
+// Hard fallback at 300ms
+setTimeout(revealAll, 300);
 
 // ---- Contact form validation ----
 const contactForm = document.getElementById('contactForm');
