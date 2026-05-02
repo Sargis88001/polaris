@@ -93,25 +93,38 @@ const fyEl = document.getElementById('footerYear');
 if (fyEl) fyEl.textContent = new Date().getFullYear();
 
 // ---- Scroll reveal ----
+function markVisible(el) {
+  el.classList.add('is-visible');
+}
+
+// Immediately mark everything already in the viewport as visible
+document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
+  const rect = el.getBoundingClientRect();
+  if (rect.top < window.innerHeight) {
+    markVisible(el);
+  }
+});
+
+// Observer for below-fold elements
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
     if (e.isIntersecting) {
-      e.target.classList.add('is-visible');
+      markVisible(e.target);
       revealObserver.unobserve(e.target);
     }
   });
-}, { threshold: 0.01, rootMargin: '0px 0px -20px 0px' });
+}, { threshold: 0.01, rootMargin: '0px 0px -10px 0px' });
 
 document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
-  revealObserver.observe(el);
+  if (!el.classList.contains('is-visible')) {
+    revealObserver.observe(el);
+  }
 });
 
-// Fallback: reveal everything after 1 second in case observer fails
+// Hard fallback: reveal everything after 800ms no matter what
 setTimeout(() => {
-  document.querySelectorAll('.reveal, .stagger > *').forEach((el) => {
-    el.classList.add('is-visible');
-  });
-}, 1000);
+  document.querySelectorAll('.reveal, .stagger > *').forEach(markVisible);
+}, 800);
 
 // ---- Contact form validation ----
 const contactForm = document.getElementById('contactForm');
