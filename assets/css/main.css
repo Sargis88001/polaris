@@ -18,8 +18,8 @@
   --color-text-muted:      #6b6a66;
   --color-text-faint:      #b0afa9;
   --color-text-inverse:    #f9f8f4;
-  --color-primary:         #e8734a;
-  --color-primary-hover:   #d45e35;
+  --color-primary:         #342d8b;
+  --color-primary-hover:   #271f6e;
   --color-dark:            #1a1a2e;
   --color-dark-surface:    #22213a;
 
@@ -105,7 +105,8 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--color-text);
 }
 
-.site-nav { margin-left: auto; }
+/* Centered nav */
+.site-nav { margin-inline: auto; }
 .nav-list {
   display: flex;
   align-items: center;
@@ -629,10 +630,15 @@ button { cursor: pointer; border: none; background: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(232,115,74,0.15) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 70% 50%, rgba(52,45,139,0.2) 0%, transparent 65%);
   pointer-events: none;
 }
-.home-hero__content { position: relative; z-index: 1; max-width: 700px; }
+/* Left-align hero content */
+.home-hero .container {
+  display: flex;
+  justify-content: flex-start;
+}
+.home-hero__content { position: relative; z-index: 1; max-width: 680px; text-align: left; }
 .home-hero__kicker {
   font-size: 0.75rem;
   font-weight: 700;
@@ -727,7 +733,7 @@ button { cursor: pointer; border: none; background: none; }
 .form-row textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(232,115,74,0.12);
+  box-shadow: 0 0 0 3px rgba(52,45,139,0.12);
 }
 .form-row textarea { resize: vertical; min-height: 140px; }
 .field-error { font-size: 0.8rem; color: #c0392b; display: none; }
@@ -843,128 +849,7 @@ button { cursor: pointer; border: none; background: none; }
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-3);
-    padding: var(--space-3);
+    padding: var(--space-4);
   }
-  .schedule-table td { border-bottom: none; padding: var(--space-1) var(--space-2); }
-}
-
-/* ---------- Coaches ---------- */
-.coaches-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-5);
-  margin-top: var(--space-8);
-}
-@media (max-width: 768px) { .coaches-grid { grid-template-columns: 1fr; } }
-.coach-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-.coach-card h3 { font-size: 1.1rem; font-weight: 700; }
-.coach-card .coach-role {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  margin-bottom: var(--space-2);
-}
-.coach-card p { font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.65; }
-
-/* ---------- Gallery ---------- */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-8);
-}
-@media (max-width: 640px) { .gallery-grid { grid-template-columns: 1fr; } }
-.gallery-item {
-  aspect-ratio: 4/3;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background: var(--color-surface-offset);
-}
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.gallery-item:hover img { transform: scale(1.04); }
-
-/* ---------- Mission / vision two-column ---------- */
-.mv-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-10);
-  margin-top: var(--space-10);
-}
-@media (max-width: 768px) { .mv-grid { grid-template-columns: 1fr; } }
-.mv-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-}
-.mv-card h2 {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: var(--space-3);
-  letter-spacing: -0.01em;
-}
-.mv-card p { font-size: 1rem; color: var(--color-text-muted); line-height: 1.7; }
-
-/* ---------- Outcomes / generic list cards ---------- */
-.outcomes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-10);
-}
-@media (max-width: 900px) { .outcomes-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .outcomes-grid { grid-column: 1fr; } }
-.outcome-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
-}
-.outcome-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: var(--space-2); }
-.outcome-card p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
-
-/* ---------- Tracks (robotics) ---------- */
-.tracks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-5);
-  margin-top: var(--space-10);
-}
-@media (max-width: 900px) { .tracks-grid { grid-template-columns: 1fr; } }
-.track-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-.track-card .track-num {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-.track-card h3 { font-size: 1.2rem; font-weight: 700; }
-.track-card p { font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.65; }
-.track-card .track-age {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-primary);
+  .schedule-table td { border-bottom: none; padding: var(--space-1) 0; }
 }
