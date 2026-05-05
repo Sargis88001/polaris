@@ -44,10 +44,16 @@
       </nav>
 
       <div class="header-controls">
-        <div class="lang-switcher" role="group" aria-label="Select language">
-          <button class="lang-btn" data-locale="en">EN</button>
-          <button class="lang-btn" data-locale="ru">RU</button>
-          <button class="lang-btn" data-locale="hy">HY</button>
+        <div class="lang-switcher" aria-label="Select language">
+          <button class="lang-switcher__trigger" aria-expanded="false" aria-haspopup="listbox">
+            <span class="lang-switcher__current">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-switcher__dropdown" role="listbox">
+            <li><button class="lang-btn" data-locale="en" role="option">EN</button></li>
+            <li><button class="lang-btn" data-locale="ru" role="option">RU</button></li>
+            <li><button class="lang-btn" data-locale="hy" role="option">HY</button></li>
+          </ul>
         </div>
         <a href="contact/" class="btn btn--primary btn--sm header-cta" data-i18n="nav.enroll">Enroll Now</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">

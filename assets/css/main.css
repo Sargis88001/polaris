@@ -181,33 +181,82 @@ button { cursor: pointer; border: none; background: none; }
   flex-shrink: 0;
 }
 .lang-switcher {
+  position: relative;
+}
+.lang-switcher__trigger {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 5px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  background: var(--color-surface-offset);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 3px;
-  background: var(--color-surface-offset);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.lang-switcher__trigger:hover,
+.lang-switcher.is-open .lang-switcher__trigger {
+  color: var(--color-text);
+  border-color: var(--color-primary);
+}
+.lang-switcher__trigger svg {
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+.lang-switcher.is-open .lang-switcher__trigger svg {
+  transform: rotate(180deg);
+}
+.lang-switcher__dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 4px;
+  min-width: 90px;
+  list-style: none;
+  z-index: 200;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+.lang-switcher.is-open .lang-switcher__dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .lang-btn {
-  padding: 4px 9px;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--color-text-muted);
   border-radius: calc(var(--radius-md) - 2px);
-  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  transition: background var(--transition), color var(--transition);
   background: transparent;
   cursor: pointer;
   border: none;
+  text-align: left;
   line-height: 1.4;
 }
-.lang-btn:hover { color: var(--color-text); }
+.lang-btn:hover {
+  background: var(--color-surface-offset);
+  color: var(--color-text);
+}
 .lang-btn.is-active {
-  background: var(--color-surface-2);
   color: var(--color-primary);
   font-weight: 700;
-  box-shadow: var(--shadow-sm);
 }
 
 .hamburger {

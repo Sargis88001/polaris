@@ -93,13 +93,42 @@ function closeMobileNav() {
 if (hamburger) hamburger.addEventListener('click', openMobileNav);
 if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
 if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileNav);
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileNav(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeMobileNav();
+    closeLangDropdowns();
+  }
+});
 
 document.querySelectorAll('.mobile-nav-group-toggle').forEach((btn) => {
   btn.addEventListener('click', () => {
     btn.closest('.mobile-nav-group').classList.toggle('is-open');
   });
 });
+
+// ---- Lang dropdown ----
+function closeLangDropdowns() {
+  document.querySelectorAll('.lang-switcher.is-open').forEach((sw) => {
+    sw.classList.remove('is-open');
+    const trigger = sw.querySelector('.lang-switcher__trigger');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
+  });
+}
+
+document.querySelectorAll('.lang-switcher__trigger').forEach((trigger) => {
+  trigger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const sw = trigger.closest('.lang-switcher');
+    const opening = !sw.classList.contains('is-open');
+    closeLangDropdowns();
+    if (opening) {
+      sw.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+document.addEventListener('click', closeLangDropdowns);
 
 // ---- Language switcher ----
 function getLang() {
@@ -144,10 +173,13 @@ function applyLang(lang) {
     const val = key.split('.').reduce((o, k) => (o ? o[k] : undefined), TRANSLATIONS[lang]);
     if (val && typeof val === 'string') el.setAttribute('aria-label', val);
   });
+  document.querySelectorAll('.lang-switcher__current').forEach((el) => {
+    el.textContent = lang.toUpperCase();
+  });
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     var active = btn.dataset.locale === lang;
     btn.classList.toggle('is-active', active);
-    btn.setAttribute('aria-pressed', String(active));
+    btn.setAttribute('aria-selected', String(active));
   });
 }
 document.querySelectorAll('.lang-btn').forEach((btn) => {
