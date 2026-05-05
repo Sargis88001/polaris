@@ -218,7 +218,13 @@ if (document.readyState === 'loading') {
 // Hard fallback at 300ms
 setTimeout(revealAll, 300);
 
-// ---- Contact form validation ----
+// ---- Contact form ----
+// Replace the three values below with your EmailJS credentials.
+// Setup: https://www.emailjs.com → Email Services → Email Templates → Account > API Keys
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
@@ -245,16 +251,39 @@ if (contactForm) {
       }
     });
     if (!valid) return;
+
     const btn = contactForm.querySelector('[type="submit"]');
+    const originalLabel = btn.textContent;
     btn.textContent = 'Sending…';
     btn.disabled = true;
-    setTimeout(() => {
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      from_name:  document.getElementById('cf-name').value.trim(),
+      from_email: document.getElementById('cf-email').value.trim(),
+      phone:      document.getElementById('cf-phone').value.trim(),
+      child_age:  document.getElementById('cf-age').value,
+      program:    document.getElementById('cf-program').value,
+      message:    document.getElementById('cf-message').value.trim(),
+    }, EMAILJS_PUBLIC_KEY)
+    .then(function () {
       contactForm.innerHTML =
         '<div style="text-align:center;padding:3rem 0">' +
           '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2" style="margin:0 auto 1rem"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>' +
           '<h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:.5rem">Thank you</h3>' +
           '<p style="color:var(--color-text-muted)">Your message is on its way. We will reply within one working day.</p>' +
         '</div>';
-    }, 1200);
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+      let errEl = contactForm.querySelector('.form-send-error');
+      if (!errEl) {
+        errEl = document.createElement('p');
+        errEl.className = 'form-send-error';
+        errEl.style.cssText = 'color:#c0392b;margin-top:1rem;font-size:0.9rem';
+        btn.insertAdjacentElement('afterend', errEl);
+      }
+      errEl.textContent = 'Something went wrong. Please try again or email us at info@polariscenter.am.';
+    });
   });
 }
