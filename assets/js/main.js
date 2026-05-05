@@ -37,11 +37,18 @@ function closeMobileNav() {
   mobileNavOverlay.setAttribute('aria-hidden', 'true');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
+  document.querySelectorAll('.mobile-nav-group').forEach((g) => g.classList.remove('is-open'));
 }
 if (hamburger) hamburger.addEventListener('click', openMobileNav);
 if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
 if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileNav);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileNav(); });
+
+document.querySelectorAll('.mobile-nav-group > span').forEach((span) => {
+  span.addEventListener('click', () => {
+    span.parentElement.classList.toggle('is-open');
+  });
+});
 
 // ---- Language switcher ----
 function getLang() {
