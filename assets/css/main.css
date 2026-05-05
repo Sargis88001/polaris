@@ -214,7 +214,7 @@ button { cursor: pointer; border: none; background: none; }
 .hamburger[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 @media (max-width: 900px) {
-  .site-nav, .header-cta { display: none; }
+  .site-nav, .header-controls .header-cta { display: none; }
   .hamburger { display: flex; }
   .header-controls { margin-left: auto; }
 }
