@@ -1,4 +1,4 @@
-# BrightPath Academy
+# Polaris Center
 
 Static HTML/CSS/JS website. No build step.
 
