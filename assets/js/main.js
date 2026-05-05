@@ -257,14 +257,18 @@ if (contactForm) {
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-      from_name:  document.getElementById('cf-name').value.trim(),
-      from_email: document.getElementById('cf-email').value.trim(),
-      phone:      document.getElementById('cf-phone').value.trim(),
-      child_age:  document.getElementById('cf-age').value,
-      program:    document.getElementById('cf-program').value,
-      message:    document.getElementById('cf-message').value.trim(),
-    }, EMAILJS_PUBLIC_KEY)
+    Promise.resolve()
+    .then(function () {
+      if (typeof emailjs === 'undefined') throw new Error('EmailJS SDK not loaded');
+      return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name:  document.getElementById('cf-name').value.trim(),
+        from_email: document.getElementById('cf-email').value.trim(),
+        phone:      document.getElementById('cf-phone').value.trim(),
+        child_age:  document.getElementById('cf-age').value,
+        program:    document.getElementById('cf-program').value,
+        message:    document.getElementById('cf-message').value.trim(),
+      }, EMAILJS_PUBLIC_KEY);
+    })
     .then(function () {
       contactForm.innerHTML =
         '<div style="text-align:center;padding:3rem 0">' +
