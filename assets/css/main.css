@@ -256,31 +256,25 @@ button { cursor: pointer; border: none; background: none; }
 .mobile-nav-close:hover { background: var(--color-surface-offset); }
 .mobile-nav ul { list-style: none; }
 .mobile-nav > ul > li > a,
-.mobile-nav > ul > li > span {
-  display: block;
+.mobile-nav-group-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   padding: 12px 0;
   font-size: 1.1rem;
   font-weight: 600;
   font-family: var(--font-display);
   color: var(--color-text);
   border-bottom: 1px solid var(--color-divider);
+  background: none;
+  text-align: left;
 }
-.mobile-nav-group > span {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  user-select: none;
-}
-.mobile-nav-group > span::after {
-  content: '';
+.mobile-nav-group-toggle svg {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%231a1a2e' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat center;
   transition: transform 0.2s ease;
 }
-.mobile-nav-group.is-open > span::after { transform: rotate(180deg); }
+.mobile-nav-group.is-open > .mobile-nav-group-toggle svg { transform: rotate(180deg); }
 .mobile-nav-group > ul { display: none; padding-left: var(--space-4); }
 .mobile-nav-group.is-open > ul { display: block; }
 .mobile-nav-group ul li a {

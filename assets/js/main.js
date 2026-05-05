@@ -44,9 +44,9 @@ if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
 if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileNav);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileNav(); });
 
-document.querySelectorAll('.mobile-nav-group > span').forEach((span) => {
-  span.addEventListener('click', () => {
-    span.parentElement.classList.toggle('is-open');
+document.querySelectorAll('.mobile-nav-group-toggle').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    btn.closest('.mobile-nav-group').classList.toggle('is-open');
   });
 });
 
