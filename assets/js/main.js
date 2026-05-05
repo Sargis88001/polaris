@@ -5,24 +5,47 @@
 var LOCALES = ['en', 'ru', 'hy'];
 
 function getLocaleFromPath() {
-  var seg = window.location.pathname.split('/').filter(Boolean)[0];
-  return LOCALES.indexOf(seg) !== -1 ? seg : 'en';
+  var segs = window.location.pathname.split('/').filter(Boolean);
+  for (var i = 0; i < segs.length; i++) {
+    if (LOCALES.indexOf(segs[i]) !== -1) return segs[i];
+  }
+  return 'en';
 }
 
 function switchLocale(newLocale) {
   try { localStorage.setItem('brightpath_lang', newLocale); } catch(e) {}
-  var segments = window.location.pathname.split('/').filter(Boolean);
-  segments[0] = newLocale;
-  window.location.href = '/' + segments.join('/') + '/';
+  var segs = window.location.pathname.split('/').filter(Boolean);
+  for (var i = 0; i < segs.length; i++) {
+    if (LOCALES.indexOf(segs[i]) !== -1) {
+      segs[i] = newLocale;
+      window.location.href = '/' + segs.join('/') + '/';
+      return;
+    }
+  }
+  window.location.href = newLocale + '/';
 }
+
+var ASSET_RE = /^(assets|public)\//;
+var LOCALE_RE = /^(en|ru|hy)\//;
+var SKIP_RE  = /^(https?:|\/\/|#|tel:|mailto:)/;
 
 function prefixLinks() {
   var locale = getLocaleFromPath();
   document.querySelectorAll('a[href]').forEach(function(link) {
     var href = link.getAttribute('href');
-    if (href && href.startsWith('/') && !href.startsWith('/en/') && !href.startsWith('/ru/') && !href.startsWith('/hy/')) {
-      link.setAttribute('href', '/' + locale + href);
+    if (!href) return;
+    if (SKIP_RE.test(href))   return;
+    if (ASSET_RE.test(href))  return;
+    if (LOCALE_RE.test(href)) return;
+    if (href === './' || href === '.' || href === '') {
+      link.setAttribute('href', locale + '/'); return;
     }
+    if (href.startsWith('/')) {
+      var stripped = href.slice(1);
+      link.setAttribute('href', stripped ? locale + '/' + stripped : locale + '/');
+      return;
+    }
+    link.setAttribute('href', locale + '/' + href);
   });
 }
 
@@ -80,8 +103,10 @@ document.querySelectorAll('.mobile-nav-group-toggle').forEach((btn) => {
 
 // ---- Language switcher ----
 function getLang() {
-  const fromPath = window.location.pathname.split('/').filter(Boolean)[0];
-  if (LOCALES.indexOf(fromPath) !== -1) return fromPath;
+  var segs = window.location.pathname.split('/').filter(Boolean);
+  for (var i = 0; i < segs.length; i++) {
+    if (LOCALES.indexOf(segs[i]) !== -1) return segs[i];
+  }
   try {
     const stored = localStorage.getItem('brightpath_lang');
     if (stored && typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[stored]) return stored;
