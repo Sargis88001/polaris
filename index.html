@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A modern children's centre in central Yerevan — gymnastics, English, robotics, theatre, creative development, and school preparation.">
-  <title>Polaris Center</title>
+  <meta name="description" content="A modern children's educational and activity center in Yerevan, ages 3 to 16. Gymnastics, English, theatre, robotics, and creative development.">
+  <title>Home | BrightPath Academy</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +16,13 @@
   <header class="site-header" id="site-header">
     <div class="header-inner container">
 
-      <a href="./" class="site-logo" aria-label="Polaris Center — Home">
-        <img src="public/images/logo.png" alt="Polaris Center" height="36" width="130" loading="eager">
+      <a href="./" class="site-logo" aria-label="BrightPath Academy — Home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="18" fill="#e8734a"/>
+          <path d="M10 26 L18 10 L26 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="18" cy="18" r="3" fill="white"/>
+        </svg>
+        <span class="logo-text" data-i18n="site.name">BrightPath Academy</span>
       </a>
 
       <nav class="site-nav" aria-label="Main navigation">
@@ -89,159 +94,144 @@
 
   <main id="main-content">
 
-    <section class="hero">
-      <div class="hero__slides" id="heroSlides" aria-live="polite">
-        <div class="hero__slide is-active" style="background-image:url('public/images/hero-gymnastics.png')" role="img" aria-label="Gymnastics program">
-          <div class="hero__slide-overlay"></div>
-        </div>
-        <div class="hero__slide" style="background-image:url('public/images/hero-english.png')" role="img" aria-label="English program">
-          <div class="hero__slide-overlay"></div>
-        </div>
-        <div class="hero__slide" style="background-image:url('public/images/hero-robotics.png')" role="img" aria-label="Robotics program">
-          <div class="hero__slide-overlay"></div>
-        </div>
-      </div>
-
-      <div class="hero__content container">
-        <span class="hero__eyebrow" data-i18n="home.heroEyebrow">Yerevan's neighbourhood centre for children</span>
-        <h1 class="hero__title" data-i18n="home.heroTitle">Where children grow<br>into themselves.</h1>
-        <p class="hero__lede" data-i18n="home.heroLede">Six specialist programs — gymnastics, English, robotics, theatre, creative development and school preparation — all under one bright roof.</p>
-        <div class="hero__actions">
-          <a href="programs/" class="btn btn--primary btn--lg" data-i18n="home.heroCtaPrimary">Explore programs</a>
-          <a href="contact/" class="btn btn--ghost btn--lg" data-i18n="home.heroCtaSecondary">Book a free trial</a>
-        </div>
-      </div>
-
-      <div class="hero__nav" aria-label="Slide navigation">
-        <button class="hero__dot is-active" aria-label="Slide 1" data-slide="0"></button>
-        <button class="hero__dot" aria-label="Slide 2" data-slide="1"></button>
-        <button class="hero__dot" aria-label="Slide 3" data-slide="2"></button>
-      </div>
-    </section>
-
-    <section class="section" id="programs">
+    <section class="home-hero">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow" data-i18n="home.programsEyebrow">What we offer</span>
-          <h2 class="section-title" data-i18n="home.programsTitle">Six programs, one address.</h2>
-        </div>
-
-        <div class="programs-grid stagger">
-
-          <a href="gymnastics/" class="program-card">
-            <div class="program-card__img">
-              <img src="public/images/hero-gymnastics.png" alt="" loading="lazy" width="480" height="320">
-            </div>
-            <div class="program-card__body">
-              <h3 data-i18n="programs.list.gymnastics.title">Gymnastics</h3>
-              <p data-i18n="programs.list.gymnastics.tagline">Balance, coordination and joy of movement — from age 3.</p>
-              <span class="program-card__link" data-i18n="home.learnMore">Learn more</span>
-            </div>
-          </a>
-
-          <a href="development/" class="program-card">
-            <div class="program-card__img">
-              <img src="public/images/hero-development.png" alt="" loading="lazy" width="480" height="320">
-            </div>
-            <div class="program-card__body">
-              <h3 data-i18n="programs.list.development.title">Creative Development</h3>
-              <p data-i18n="programs.list.development.tagline">Drawing, craft and imagination in a studio designed for small hands.</p>
-              <span class="program-card__link" data-i18n="home.learnMore">Learn more</span>
-            </div>
-          </a>
-
-          <a href="english/" class="program-card">
-            <div class="program-card__img">
-              <img src="public/images/hero-english.png" alt="" loading="lazy" width="480" height="320">
-            </div>
-            <div class="program-card__body">
-              <h3 data-i18n="programs.list.english.title">English</h3>
-              <p data-i18n="programs.list.english.tagline">Communicative English taught by qualified, caring teachers.</p>
-              <span class="program-card__link" data-i18n="home.learnMore">Learn more</span>
-            </div>
-          </a>
-
-          <a href="theatre/" class="program-card">
-            <div class="program-card__img">
-              <img src="public/images/hero-theatre.png" alt="" loading="lazy" width="480" height="320">
-            </div>
-            <div class="program-card__body">
-              <h3 data-i18n="programs.list.theatre.title">Theatre</h3>
-              <p data-i18n="programs.list.theatre.tagline">Voice, movement and story — children discover confidence on stage.</p>
-              <span class="program-card__link" data-i18n="home.learnMore">Learn more</span>
-            </div>
-          </a>
-
-          <a href="school-prep/" class="program-card">
-            <div class="program-card__img">
-              <img src="public/images/hero-school-prep.png" alt="" loading="lazy" width="480" height="320">
-            </div>
-            <div class="program-card__body">
-              <h3 data-i18n="programs.list.schoolPrep.title">School Preparation</h3>
-              <p data-i18n="programs.list.schoolPrep.tagline">Literacy, numeracy and social readiness — calmly, a year before school.</p>
-              <span class="program-card__link" data-i18n="home.learnMore">Learn more</span>
-            </div>
-          </a>
-
-          <a href="robotics/" class="program-card">
-            <div class="program-card__img">
-              <img src="public/images/hero-robotics.png" alt="" loading="lazy" width="480" height="320">
-            </div>
-            <div class="program-card__body">
-              <h3 data-i18n="programs.list.robotics.title">Robotics</h3>
-              <p data-i18n="programs.list.robotics.tagline">LEGO Engineering and coding introduced through play and projects.</p>
-              <span class="program-card__link" data-i18n="home.learnMore">Learn more</span>
-            </div>
-          </a>
-
+        <div class="home-hero__content">
+          <div class="home-hero__kicker" data-i18n="home.kicker">Ages 3 to 16 · Yerevan</div>
+          <h1 class="home-hero__title" data-i18n-template="home.heroTitle" data-i18n-accent="home.heroAccent">Where children grow, <em>learn</em>, and discover.</h1>
+          <p class="home-hero__lede" data-i18n="home.heroLede">A modern center for gymnastics, English, theatre, robotics, and creative development. Six programs designed by educators who believe great teaching feels like play.</p>
+          <div class="home-hero__actions">
+            <a href="programs/" class="btn btn--primary btn--lg" data-i18n="home.ctaPrimary">Explore programs</a>
+            <a href="contact/" class="btn btn--ghost-light btn--lg" data-i18n="home.ctaSecondary">Contact us</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section outcomes-section">
+    <section class="section">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:var(--space-10);max-width:640px">
+          <span class="eyebrow" data-i18n="nav.programs">Programs</span>
+          <h2 class="section-title" data-i18n="home.programsTitle">Six programs, one philosophy.</h2>
+          <p class="section-lede" style="margin-top:var(--space-3)" data-i18n="home.programsLede">Small groups, expert teachers, and a curriculum that grows with your child.</p>
+        </div>
+        <div class="programs-grid stagger">
+          
+        <a href="gymnastics/" class="program-card">
+          <div class="program-card__thumb"><img src="public/images/hero-gymnastics.png" alt="" loading="lazy"></div>
+          <div class="program-card__body">
+            <span class="program-card__age" data-i18n="programs.list.gymnastics.ageRange">Ages 4 to 16</span>
+            <h3 data-i18n="programs.list.gymnastics.title">Gymnastics</h3>
+            <p data-i18n="programs.list.gymnastics.summary">Strength, flexibility, and confidence on the mat, taught by certified coaches in a bright, modern gym.</p>
+            <span class="program-card__link" data-i18n="common.learnMore">Learn more →</span>
+          </div>
+        </a>
+        <a href="development/" class="program-card">
+          <div class="program-card__thumb"><img src="public/images/hero-development.png" alt="" loading="lazy"></div>
+          <div class="program-card__body">
+            <span class="program-card__age" data-i18n="programs.list.development.ageRange">Ages 3 to 7</span>
+            <h3 data-i18n="programs.list.development.title">Creative Development</h3>
+            <p data-i18n="programs.list.development.summary">Cognitive, motor, and social development for ages 3 to 7, the foundation for every program that follows.</p>
+            <span class="program-card__link" data-i18n="common.learnMore">Learn more →</span>
+          </div>
+        </a>
+        <a href="english/" class="program-card">
+          <div class="program-card__thumb"><img src="public/images/hero-english.png" alt="" loading="lazy"></div>
+          <div class="program-card__body">
+            <span class="program-card__age" data-i18n="programs.list.english.ageRange">Ages 5 to 16</span>
+            <h3 data-i18n="programs.list.english.title">English</h3>
+            <p data-i18n="programs.list.english.summary">Communicative English from first words to fluency. Speaking-first lessons, real progress.</p>
+            <span class="program-card__link" data-i18n="common.learnMore">Learn more →</span>
+          </div>
+        </a>
+        <a href="theatre/" class="program-card">
+          <div class="program-card__thumb"><img src="public/images/hero-theatre.png" alt="" loading="lazy"></div>
+          <div class="program-card__body">
+            <span class="program-card__age" data-i18n="programs.list.theatre.ageRange">Ages 6 to 14</span>
+            <h3 data-i18n="programs.list.theatre.title">Theatre</h3>
+            <p data-i18n="programs.list.theatre.summary">A theatre program that turns shy whispers into clear, confident voices, ending every term in a real performance.</p>
+            <span class="program-card__link" data-i18n="common.learnMore">Learn more →</span>
+          </div>
+        </a>
+        <a href="school-prep/" class="program-card">
+          <div class="program-card__thumb"><img src="public/images/hero-school-prep.png" alt="" loading="lazy"></div>
+          <div class="program-card__body">
+            <span class="program-card__age" data-i18n="programs.list.schoolPrep.ageRange">Ages 5 to 6</span>
+            <h3 data-i18n="programs.list.schoolPrep.title">School Preparation</h3>
+            <p data-i18n="programs.list.schoolPrep.summary">A calm, thorough year that gets children ready for school, not just academically but in every way.</p>
+            <span class="program-card__link" data-i18n="common.learnMore">Learn more →</span>
+          </div>
+        </a>
+        <a href="robotics/" class="program-card">
+          <div class="program-card__thumb"><img src="public/images/hero-robotics.png" alt="" loading="lazy"></div>
+          <div class="program-card__body">
+            <span class="program-card__age" data-i18n="programs.list.robotics.ageRange">Ages 7 to 16</span>
+            <h3 data-i18n="programs.list.robotics.title">Robotics</h3>
+            <p data-i18n="programs.list.robotics.summary">Hands-on coding, circuits, and real engineering, from LEGO Mindstorms to Python and Arduino.</p>
+            <span class="program-card__link" data-i18n="common.learnMore">Learn more →</span>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--offset">
       <div class="container">
         <div class="reveal" style="max-width:640px">
-          <span class="eyebrow" data-i18n="home.outcomesEyebrow">What parents notice</span>
-          <h2 class="section-title" data-i18n="home.outcomesTitle">Children leave different.</h2>
+          <span class="eyebrow" data-i18n="home.whyEyebrow">Why BrightPath</span>
+          <h2 class="section-title" data-i18n="home.whyTitle">Why families choose BrightPath</h2>
+          <p class="section-lede" style="margin-top:var(--space-3)" data-i18n="home.whyLede">Twelve years of practice with one quiet promise: every child is met where they are.</p>
         </div>
-        <div class="outcomes-grid stagger">
-          <article class="outcome-card">
-            <h3 data-i18n="home.outcomes.confidence.title">More confident</h3>
-            <p data-i18n="home.outcomes.confidence.body">They raise their hand in class. They introduce themselves. They try again when something is hard.</p>
-          </article>
-          <article class="outcome-card">
-            <h3 data-i18n="home.outcomes.focus.title">Better at focusing</h3>
-            <p data-i18n="home.outcomes.focus.body">Consistent routines and small-group attention make concentration feel natural, not forced.</p>
-          </article>
-          <article class="outcome-card">
-            <h3 data-i18n="home.outcomes.social.title">Kinder to others</h3>
-            <p data-i18n="home.outcomes.social.body">Mixed-age groups and collaborative projects build the habits of listening, sharing and helping.</p>
-          </article>
-          <article class="outcome-card">
-            <h3 data-i18n="home.outcomes.ready.title">Ready for school</h3>
-            <p data-i18n="home.outcomes.ready.body">Not just academically — but emotionally settled, curious, and used to being in a group.</p>
-          </article>
+        <div class="why-grid stagger">
+          <div class="why-item"><h3 data-i18n="home.whyPoints.0.title">Small groups</h3><p data-i18n="home.whyPoints.0.text">Eight to twelve children per class. Every voice has room to grow.</p></div><div class="why-item"><h3 data-i18n="home.whyPoints.1.title">Certified coaches</h3><p data-i18n="home.whyPoints.1.text">Specialists in early years, sport, language, and engineering, not generalists.</p></div><div class="why-item"><h3 data-i18n="home.whyPoints.2.title">Honest progress</h3><p data-i18n="home.whyPoints.2.text">Termly reports written like a conversation, not a school report card.</p></div><div class="why-item"><h3 data-i18n="home.whyPoints.3.title">A real building</h3><p data-i18n="home.whyPoints.3.text">A bright studio in central Yerevan, designed by people who watch children all day.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="cta-band">
-      <div class="container cta-band__inner reveal">
-        <div class="cta-band__text">
-          <h2 data-i18n="home.ctaBandTitle">Book a free trial class.</h2>
-          <p data-i18n="home.ctaBandLede">Pick a program, send a quick note, and we will reply within one working day.</p>
+    <section class="section">
+      <div class="container">
+        <div class="reveal" style="max-width:560px">
+          <h2 class="section-title" data-i18n="home.testimonialsTitle">Words from our families</h2>
         </div>
-        <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+        <div class="testimonials-grid stagger">
+          <blockquote class="testimonial-card">
+            <p data-i18n="testimonials.0.quote">My daughter started in beginner gymnastics terrified of forward rolls. Two terms in, she is competing, and her confidence at school has changed completely.</p>
+            <span class="testimonial-card__author" data-i18n="testimonials.0.author">Mariam P., parent</span>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p data-i18n="testimonials.1.quote">The English program is the first one she actually wants to attend. The lessons are full of conversation, not worksheets.</p>
+            <span class="testimonial-card__author" data-i18n="testimonials.1.author">Anush S., parent</span>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p data-i18n="testimonials.2.quote">My son built his first robot here when he was eight. He is twelve now and still asks for the next class on Tuesday morning.</p>
+            <span class="testimonial-card__author" data-i18n="testimonials.2.author">Lilit B., parent</span>
+          </blockquote>
+        </div>
       </div>
     </section>
 
+
+  <section class="cta-band">
+    <div class="container cta-band__inner reveal">
+      <div class="cta-band__text">
+        <h2 data-i18n="home.ctaBandTitle">Book a free trial class.</h2>
+        <p data-i18n="home.ctaBandLede">Pick a program, send a quick note, and we will reply within one working day.</p>
+      </div>
+      <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+    </div>
+  </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="./" class="site-logo" aria-label="Polaris Center — Home">
-          <img src="public/images/logo.png" alt="Polaris Center" height="36" width="130" loading="lazy">
+        <a href="./" class="site-logo" aria-label="BrightPath Academy">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="18" fill="#e8734a"/>
+          <path d="M10 26 L18 10 L26 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="18" cy="18" r="3" fill="white"/>
+        </svg>
+          <span class="logo-text" data-i18n="site.name">BrightPath Academy</span>
         </a>
         <p class="footer-tagline" data-i18n="footer.tagline">Where children grow, learn, and discover.</p>
         <span class="footer-address" data-i18n="footer.address">14 Tigran Mets Avenue, Yerevan 0010</span>
@@ -267,7 +257,7 @@
       </div>
     </div>
     <div class="footer-bar container">
-      <span>© <span id="footerYear"></span> Polaris Center. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span>© <span id="footerYear"></span> BrightPath Academy. <span data-i18n="footer.rights">All rights reserved.</span></span>
     </div>
   </footer>
 
