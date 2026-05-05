@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BrightPath Academy</title>
+  <script>
+    (function() {
+      var lang = 'en';
+      try {
+        var stored = localStorage.getItem('brightpath_lang');
+        if (stored === 'en' || stored === 'ru' || stored === 'hy') {
+          lang = stored;
+        } else {
+          var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+          if (nav.indexOf('hy') === 0) lang = 'hy';
+          else if (nav.indexOf('ru') === 0) lang = 'ru';
+          else lang = 'en';
+        }
+      } catch(e) {
+        var nav2 = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (nav2.indexOf('hy') === 0) lang = 'hy';
+        else if (nav2.indexOf('ru') === 0) lang = 'ru';
+        else lang = 'en';
+      }
+      window.location.replace('/' + lang + '/');
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/en/">
+  </noscript>
+</head>
+<body></body>
+</html>

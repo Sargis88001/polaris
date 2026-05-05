@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Acer\\\\Desktop\\\\polaris-main-frontend\" -Recurse -File | Where-Object { $_.Extension -in @\\('.html', '.js', '.css'\\) } | Select-Object FullName | Sort-Object FullName)"
+    ]
+  }
+}
