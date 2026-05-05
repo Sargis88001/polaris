@@ -278,18 +278,23 @@ if (contactForm) {
         '</div>';
     })
     .catch(function (err) {
-      console.error('EmailJS error:', err);
       btn.disabled = false;
       btn.textContent = originalLabel;
       let errEl = contactForm.querySelector('.form-send-error');
       if (!errEl) {
         errEl = document.createElement('p');
         errEl.className = 'form-send-error';
-        errEl.style.cssText = 'color:#c0392b;margin-top:1rem;font-size:0.9rem';
+        errEl.style.cssText = 'color:#c0392b;margin-top:1rem;font-size:0.9rem;word-break:break-word';
         btn.insertAdjacentElement('afterend', errEl);
       }
-      const detail = (err && (err.text || err.message)) ? ' (' + (err.text || err.message) + ')' : '';
-      errEl.textContent = 'Something went wrong' + detail + '. Please try again or email us at info@polariscenter.am.';
+      var detail = '';
+      if (err) {
+        if (typeof err === 'string') detail = err;
+        else if (err.text) detail = err.text;
+        else if (err.message) detail = err.message;
+        else try { detail = JSON.stringify(err); } catch(_) {}
+      }
+      errEl.textContent = 'Error: ' + (detail || 'unknown — check your EmailJS service and template settings.');
     });
   });
 }
