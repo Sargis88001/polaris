@@ -277,7 +277,8 @@ if (contactForm) {
           '<p style="color:var(--color-text-muted)">Your message is on its way. We will reply within one working day.</p>' +
         '</div>';
     })
-    .catch(function () {
+    .catch(function (err) {
+      console.error('EmailJS error:', err);
       btn.disabled = false;
       btn.textContent = originalLabel;
       let errEl = contactForm.querySelector('.form-send-error');
@@ -287,7 +288,8 @@ if (contactForm) {
         errEl.style.cssText = 'color:#c0392b;margin-top:1rem;font-size:0.9rem';
         btn.insertAdjacentElement('afterend', errEl);
       }
-      errEl.textContent = 'Something went wrong. Please try again or email us at info@polariscenter.am.';
+      const detail = (err && (err.text || err.message)) ? ' (' + (err.text || err.message) + ')' : '';
+      errEl.textContent = 'Something went wrong' + detail + '. Please try again or email us at info@polariscenter.am.';
     });
   });
 }
