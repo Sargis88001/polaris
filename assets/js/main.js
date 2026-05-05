@@ -119,10 +119,14 @@ function applyLang(lang) {
     const val = key.split('.').reduce((o, k) => (o ? o[k] : undefined), TRANSLATIONS[lang]);
     if (val && typeof val === 'string') el.setAttribute('aria-label', val);
   });
-  document.querySelectorAll('.lang-select').forEach((sel) => { sel.value = lang; });
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    var active = btn.dataset.locale === lang;
+    btn.classList.toggle('is-active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
 }
-document.querySelectorAll('.lang-select').forEach((sel) => {
-  sel.addEventListener('change', (e) => switchLocale(e.target.value));
+document.querySelectorAll('.lang-btn').forEach((btn) => {
+  btn.addEventListener('click', function() { switchLocale(btn.dataset.locale); });
 });
 applyLang(getLang());
 

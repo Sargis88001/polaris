@@ -136,7 +136,14 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--color-text);
   background: rgba(0,0,0,0.05);
 }
-.nav-link[aria-current="page"] { color: var(--color-primary); }
+.nav-link[aria-current="page"],
+.nav-link.nav-link--active { color: var(--color-primary); }
+.nav-dropdown-link[aria-current="page"],
+.nav-dropdown-link.nav-link--active {
+  color: var(--color-primary);
+  background: var(--color-surface-offset);
+  font-weight: 600;
+}
 
 .nav-item--dropdown { position: relative; }
 .nav-dropdown {
@@ -173,20 +180,35 @@ button { cursor: pointer; border: none; background: none; }
   gap: var(--space-3);
   flex-shrink: 0;
 }
-.lang-select {
-  appearance: none;
-  -webkit-appearance: none;
-  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b6a66' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 8px center;
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 6px 26px 6px 10px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  cursor: pointer;
-  transition: border-color var(--transition), color var(--transition);
+  padding: 3px;
+  background: var(--color-surface-offset);
 }
-.lang-select:hover { border-color: var(--color-primary); color: var(--color-text); }
+.lang-btn {
+  padding: 4px 9px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  border-radius: calc(var(--radius-md) - 2px);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  line-height: 1.4;
+}
+.lang-btn:hover { color: var(--color-text); }
+.lang-btn.is-active {
+  background: var(--color-surface-2);
+  color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
 
 .hamburger {
   display: none;
