@@ -811,6 +811,132 @@ button { cursor: pointer; border: none; background: none; }
 .stagger > .is-visible:nth-child(5) { transition-delay: 320ms; }
 .stagger > .is-visible:nth-child(6) { transition-delay: 400ms; }
 
+/* ---------- Mission / Vision cards (about) ---------- */
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+@media (max-width: 640px) { .mv-grid { grid-template-columns: 1fr; } }
+.mv-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.mv-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.mv-card p { font-size: 1rem; line-height: 1.7; color: var(--color-text-muted); }
+
+/* ---------- Outcomes grid (about / school-prep) ---------- */
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+@media (max-width: 900px) { .outcomes-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .outcomes-grid { grid-template-columns: 1fr; } }
+.outcome-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.outcome-card h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--color-text); }
+.outcome-card p { font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ---------- Coaches grid (gymnastics) ---------- */
+.coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+@media (max-width: 768px) { .coaches-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .coaches-grid { grid-template-columns: 1fr; } }
+.coach-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.coach-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--color-text); }
+.coach-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.coach-card p { font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ---------- Gallery grid (gymnastics) ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-10);
+}
+@media (max-width: 640px) { .gallery-grid { grid-template-columns: 1fr; } }
+.gallery-item {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--color-surface-offset);
+}
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.gallery-item:hover img { transform: scale(1.04); }
+
+/* ---------- Tracks grid (robotics) ---------- */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+@media (max-width: 768px) { .tracks-grid { grid-template-columns: 1fr; } }
+.track-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.track-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.25;
+}
+.track-age {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.track-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--color-text); }
+.track-card p { font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); }
+
 /* ---------- Schedule table ---------- */
 .schedule-table {
   width: 100%;

@@ -57,6 +57,7 @@ const TRANSLATIONS = {
     "statsLabel": "families learning with us this year",
     "programsTitle": "Six programs, one philosophy.",
     "programsLede": "Small groups, expert teachers, and a curriculum that grows with your child.",
+    "whyEyebrow": "Why BrightPath",
     "whyTitle": "Why families choose BrightPath",
     "whyLede": "Twelve years of practice with one quiet promise: every child is met where they are.",
     "whyPoints": [
@@ -364,6 +365,7 @@ const TRANSLATIONS = {
     "statsLabel": "семей учатся с нами в этом году",
     "programsTitle": "Шесть программ, одна философия.",
     "programsLede": "Маленькие группы, опытные педагоги и программа, которая растёт вместе с ребёнком.",
+    "whyEyebrow": "Почему BrightPath",
     "whyTitle": "Почему семьи выбирают BrightPath",
     "whyLede": "Двенадцать лет практики и одно тихое обещание: каждого ребёнка встречаем там, где он есть.",
     "whyPoints": [
@@ -671,6 +673,7 @@ const TRANSLATIONS = {
     "statsLabel": "ընտանիք սովորում է մեզ մոտ այս տարի",
     "programsTitle": "Վեց ծրագիր, մեկ փիլիսոփայություն։",
     "programsLede": "Փոքր խմբեր, փորձառու ուսուցիչներ և ծրագիր, որն աճում է երեխայի հետ միասին։",
+    "whyEyebrow": "Ինչու BrightPath",
     "whyTitle": "Ինչու են ընտանիքները ընտրում BrightPath-ը",
     "whyLede": "Տասներկու տարվա պրակտիկա մեկ լուռ խոստումով՝ յուրաքանչյուր երեխա ընդունվում է այնտեղ, որտեղ նա է։",
     "whyPoints": [

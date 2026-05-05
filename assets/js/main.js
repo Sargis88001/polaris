@@ -5,8 +5,9 @@
 (function () {
   const path = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-link, .nav-dropdown-link').forEach((link) => {
-    const href = (link.getAttribute('href') || '').replace(/\/$/, '') || '/';
-    if (href === path) {
+    if (!link.href) return;
+    const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
+    if (linkPath === path) {
       link.setAttribute('aria-current', 'page');
       link.classList.add('nav-link--active');
     }
@@ -127,7 +128,18 @@ if (contactForm) {
     let valid = true;
     contactForm.querySelectorAll('[required]').forEach((field) => {
       const row = field.closest('.form-row');
-      if (!field.value.trim()) {
+      let fieldValid = true;
+      if (field.type === 'email') {
+        fieldValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
+      } else if (field.type === 'number') {
+        const val = parseInt(field.value, 10);
+        const min = field.min !== '' ? parseInt(field.min, 10) : -Infinity;
+        const max = field.max !== '' ? parseInt(field.max, 10) : Infinity;
+        fieldValid = !isNaN(val) && val >= min && val <= max;
+      } else {
+        fieldValid = field.value.trim() !== '';
+      }
+      if (!fieldValid) {
         row.classList.add('has-error');
         valid = false;
       } else {
