@@ -1,10 +1,10 @@
-// BrightPath Academy translation strings.
+// Polaris Center translation strings.
 // Generated from src/messages/{en,ru,hy}.json.
 
 const TRANSLATIONS = {
   en: {
   "site": {
-    "name": "BrightPath Academy",
+    "name": "Polaris Center",
     "tagline": "Where children grow, learn, and discover",
     "description": "A modern center for gymnastics, English, theatre, robotics, and creative development for children ages 3 to 16 in Yerevan."
   },
@@ -35,7 +35,7 @@ const TRANSLATIONS = {
     "tryAgain": "Try again",
     "yerevan": "Yerevan, Armenia",
     "ages": "Ages 3 to 16",
-    "fromTheJournal": "From the BrightPath Journal"
+    "fromTheJournal": "From the Polaris Center Journal"
   },
   "theme": {
     "toggleLight": "Switch to light mode",
@@ -57,8 +57,8 @@ const TRANSLATIONS = {
     "statsLabel": "families learning with us this year",
     "programsTitle": "Six programs, one philosophy.",
     "programsLede": "Small groups, expert teachers, and a curriculum that grows with your child.",
-    "whyEyebrow": "Why BrightPath",
-    "whyTitle": "Why families choose BrightPath",
+    "whyEyebrow": "Why Polaris Center",
+    "whyTitle": "Why families choose Polaris Center",
     "whyLede": "Twelve years of practice with one quiet promise: every child is met where they are.",
     "whyPoints": [
       {
@@ -186,7 +186,7 @@ const TRANSLATIONS = {
     "ctaLede": "Saturday open hours, 11:00 to 13:00. No appointment needed."
   },
   "about": {
-    "title": "About BrightPath",
+    "title": "About Polaris Center",
     "heroTitle": "A neighbourhood center, built by teachers.",
     "heroLede": "Twelve years, six programs, one bright building in central Yerevan.",
     "missionTitle": "Our mission",
@@ -232,7 +232,7 @@ const TRANSLATIONS = {
       "successTitle": "Thank you",
       "successText": "Your message is on its way. We will reply within one working day.",
       "errorTitle": "Something went wrong.",
-      "errorText": "Please try again, or write to us directly at hello@brightpath.am.",
+      "errorText": "Please try again, or write to us directly at info@polariscenter.am.",
       "errors": {
         "name": "Please tell us your name.",
         "phone": "Please share a phone number we can reach you on.",
@@ -249,7 +249,7 @@ const TRANSLATIONS = {
       "addressTitle": "Address",
       "hoursWeek": "Mon to Fri · 09:00 - 20:00",
       "hoursWeekend": "Sat · 10:00 - 17:00",
-      "address": "14 Tigran Mets Avenue, Yerevan 0010"
+      "address": "17 Sundukyan St, Yerevan 0012"
     }
   },
   "footer": {
@@ -259,9 +259,9 @@ const TRANSLATIONS = {
     "resources": "Resources",
     "follow": "Follow us",
     "rights": "All rights reserved.",
-    "address": "14 Tigran Mets Avenue, Yerevan 0010",
-    "phone": "+374 10 000 000",
-    "email": "hello@brightpath.am"
+    "address": "17 Sundukyan St, Yerevan 0012",
+    "phone": "+374 44 171579",
+    "email": "info@polariscenter.am"
   },
   "metadata": {
     "home": {
@@ -270,7 +270,7 @@ const TRANSLATIONS = {
     },
     "about": {
       "title": "About",
-      "description": "BrightPath Academy was built by teachers, for families. Twelve years, six programs, one bright building in central Yerevan."
+      "description": "Polaris Center was built by teachers, for families. Twelve years, six programs, one bright building in central Yerevan."
     },
     "gymnastics": {
       "title": "Gymnastics",
@@ -312,7 +312,7 @@ const TRANSLATIONS = {
 },
   ru: {
   "site": {
-    "name": "BrightPath Academy",
+    "name": "Polaris Center",
     "tagline": "Где дети растут, учатся и открывают мир",
     "description": "Современный центр гимнастики, английского, театра, робототехники и творческого развития для детей от 3 до 16 лет в Ереване."
   },
@@ -343,7 +343,7 @@ const TRANSLATIONS = {
     "tryAgain": "Попробовать снова",
     "yerevan": "Ереван, Армения",
     "ages": "Возраст 3–16",
-    "fromTheJournal": "Из журнала BrightPath"
+    "fromTheJournal": "Из журнала Polaris Center"
   },
   "theme": {
     "toggleLight": "Переключить на светлую тему",
@@ -365,8 +365,8 @@ const TRANSLATIONS = {
     "statsLabel": "семей учатся с нами в этом году",
     "programsTitle": "Шесть программ, одна философия.",
     "programsLede": "Маленькие группы, опытные педагоги и программа, которая растёт вместе с ребёнком.",
-    "whyEyebrow": "Почему BrightPath",
-    "whyTitle": "Почему семьи выбирают BrightPath",
+    "whyEyebrow": "Почему Polaris Center",
+    "whyTitle": "Почему семьи выбирают Polaris Center",
     "whyLede": "Двенадцать лет практики и одно тихое обещание: каждого ребёнка встречаем там, где он есть.",
     "whyPoints": [
       {
@@ -494,7 +494,7 @@ const TRANSLATIONS = {
     "ctaLede": "Открытые субботние часы, 11:00–13:00. Запись не нужна."
   },
   "about": {
-    "title": "О BrightPath",
+    "title": "О Polaris Center",
     "heroTitle": "Соседский центр, построенный учителями.",
     "heroLede": "Двенадцать лет, шесть программ, одно светлое здание в центре Еревана.",
     "missionTitle": "Наша миссия",
@@ -540,7 +540,7 @@ const TRANSLATIONS = {
       "successTitle": "Спасибо",
       "successText": "Ваше сообщение в пути. Мы ответим в течение одного рабочего дня.",
       "errorTitle": "Что-то пошло не так.",
-      "errorText": "Попробуйте ещё раз или напишите нам напрямую: hello@brightpath.am.",
+      "errorText": "Попробуйте ещё раз или напишите нам напрямую: info@polariscenter.am.",
       "errors": {
         "name": "Пожалуйста, укажите ваше имя.",
         "phone": "Пожалуйста, укажите телефон, по которому с вами можно связаться.",
@@ -557,7 +557,7 @@ const TRANSLATIONS = {
       "addressTitle": "Адрес",
       "hoursWeek": "Пн–Пт · 09:00–20:00",
       "hoursWeekend": "Сб · 10:00–17:00",
-      "address": "пр. Тиграна Меца 14, Ереван 0010"
+      "address": "ул. Сундукяна 17, Ереван 0012"
     }
   },
   "footer": {
@@ -567,9 +567,9 @@ const TRANSLATIONS = {
     "resources": "Ресурсы",
     "follow": "Соцсети",
     "rights": "Все права защищены.",
-    "address": "пр. Тиграна Меца 14, Ереван 0010",
-    "phone": "+374 10 000 000",
-    "email": "hello@brightpath.am"
+    "address": "ул. Сундукяна 17, Ереван 0012",
+    "phone": "+374 44 171579",
+    "email": "info@polariscenter.am"
   },
   "metadata": {
     "home": {
@@ -578,7 +578,7 @@ const TRANSLATIONS = {
     },
     "about": {
       "title": "О нас",
-      "description": "BrightPath Academy создан учителями для семей. Двенадцать лет, шесть программ, одно светлое здание в центре Еревана."
+      "description": "Polaris Center создан учителями для семей. Двенадцать лет, шесть программ, одно светлое здание в центре Еревана."
     },
     "gymnastics": {
       "title": "Гимнастика",
@@ -620,7 +620,7 @@ const TRANSLATIONS = {
 },
   hy: {
   "site": {
-    "name": "BrightPath Academy",
+    "name": "Polaris Center",
     "tagline": "Որտեղ երեխաներն աճում, սովորում և բացահայտում են",
     "description": "Մարմնամարզության, անգլերենի, թատրոնի, ռոբոտաշինության և ստեղծագործական զարգացման ժամանակակից կենտրոն 3-ից 16 տարեկան երեխաների համար Երևանում։"
   },
@@ -651,7 +651,7 @@ const TRANSLATIONS = {
     "tryAgain": "Փորձել կրկին",
     "yerevan": "Երևան, Հայաստան",
     "ages": "Տարիք 3-ից 16",
-    "fromTheJournal": "BrightPath ամսագրից"
+    "fromTheJournal": "Polaris Center ամսագրից"
   },
   "theme": {
     "toggleLight": "Անցնել լուսավոր ռեժիմի",
@@ -673,8 +673,8 @@ const TRANSLATIONS = {
     "statsLabel": "ընտանիք սովորում է մեզ մոտ այս տարի",
     "programsTitle": "Վեց ծրագիր, մեկ փիլիսոփայություն։",
     "programsLede": "Փոքր խմբեր, փորձառու ուսուցիչներ և ծրագիր, որն աճում է երեխայի հետ միասին։",
-    "whyEyebrow": "Ինչու BrightPath",
-    "whyTitle": "Ինչու են ընտանիքները ընտրում BrightPath-ը",
+    "whyEyebrow": "Ինչու Polaris Center",
+    "whyTitle": "Ինչու են ընտանիքները ընտրում Polaris Center-ը",
     "whyLede": "Տասներկու տարվա պրակտիկա մեկ լուռ խոստումով՝ յուրաքանչյուր երեխա ընդունվում է այնտեղ, որտեղ նա է։",
     "whyPoints": [
       {
@@ -802,7 +802,7 @@ const TRANSLATIONS = {
     "ctaLede": "Շաբաթ բաց ժամեր, 11:00-13:00։ Ամրագրում պետք չէ։"
   },
   "about": {
-    "title": "BrightPath-ի մասին",
+    "title": "Polaris Center-ի մասին",
     "heroTitle": "Թաղային կենտրոն, կառուցված ուսուցիչների կողմից։",
     "heroLede": "Տասներկու տարի, վեց ծրագիր, մեկ լուսավոր շենք Երևանի կենտրոնում։",
     "missionTitle": "Մեր առաքելությունը",
@@ -848,7 +848,7 @@ const TRANSLATIONS = {
       "successTitle": "Շնորհակալություն",
       "successText": "Ձեր հաղորդագրությունը ճանապարհին է։ Մենք կպատասխանենք մեկ աշխատանքային օրվա ընթացքում։",
       "errorTitle": "Ինչ-որ բան սխալ գնաց։",
-      "errorText": "Խնդրում ենք փորձել կրկին կամ գրել մեզ ուղղակի՝ hello@brightpath.am:",
+      "errorText": "Խնդրում ենք փորձել կրկին կամ գրել մեզ ուղղակի՝ info@polariscenter.am:",
       "errors": {
         "name": "Խնդրում ենք նշել ձեր անունը։",
         "phone": "Խնդրում ենք նշել հեռախոս, որով կարող ենք կապվել։",
@@ -865,7 +865,7 @@ const TRANSLATIONS = {
       "addressTitle": "Հասցե",
       "hoursWeek": "Երկ.-Ուրբ. · 09:00-20:00",
       "hoursWeekend": "Շբթ. · 10:00-17:00",
-      "address": "Տիգրան Մեծի պող. 14, Երևան 0010"
+      "address": "Սունդուկյան փ. 17, Երևան 0012"
     }
   },
   "footer": {
@@ -875,9 +875,9 @@ const TRANSLATIONS = {
     "resources": "Ռեսուրսներ",
     "follow": "Հետևել",
     "rights": "Բոլոր իրավունքները պաշտպանված են։",
-    "address": "Տիգրան Մեծի պող. 14, Երևան 0010",
-    "phone": "+374 10 000 000",
-    "email": "hello@brightpath.am"
+    "address": "Սունդուկյան փ. 17, Երևան 0012",
+    "phone": "+374 44 171579",
+    "email": "info@polariscenter.am"
   },
   "metadata": {
     "home": {
@@ -886,7 +886,7 @@ const TRANSLATIONS = {
     },
     "about": {
       "title": "Մեր մասին",
-      "description": "BrightPath Academy-ն կառուցել են ուսուցիչները ընտանիքների համար։ Տասներկու տարի, վեց ծրագիր, մեկ շենք Երևանի կենտրոնում։"
+      "description": "Polaris Center-ն կառուցել են ուսուցիչները ընտանիքների համար։ Տասներկու տարի, վեց ծրագիր, մեկ շենք Երևանի կենտրոնում։"
     },
     "gymnastics": {
       "title": "Մարմնամարզություն",

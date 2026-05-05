@@ -1,4 +1,4 @@
-// BrightPath Academy — interactive behaviour.
+// Polaris Center — interactive behaviour.
 // Static site, no framework.
 
 // ---- Locale routing ----
@@ -13,7 +13,7 @@ function getLocaleFromPath() {
 }
 
 function switchLocale(newLocale) {
-  try { localStorage.setItem('brightpath_lang', newLocale); } catch(e) {}
+  try { localStorage.setItem('polaris_lang', newLocale); } catch(e) {}
   var segs = window.location.pathname.split('/').filter(Boolean);
   for (var i = 0; i < segs.length; i++) {
     if (LOCALES.indexOf(segs[i]) !== -1) {
@@ -137,14 +137,14 @@ function getLang() {
     if (LOCALES.indexOf(segs[i]) !== -1) return segs[i];
   }
   try {
-    const stored = localStorage.getItem('brightpath_lang');
+    const stored = localStorage.getItem('polaris_lang');
     if (stored && typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[stored]) return stored;
   } catch(e) {}
   return 'en';
 }
 function applyLang(lang) {
   if (typeof TRANSLATIONS === 'undefined' || !TRANSLATIONS[lang]) return;
-  try { localStorage.setItem('brightpath_lang', lang); } catch(e) {}
+  try { localStorage.setItem('polaris_lang', lang); } catch(e) {}
   document.documentElement.setAttribute('lang', lang);
 
   document.querySelectorAll('[data-i18n-template]').forEach((el) => {
