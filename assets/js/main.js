@@ -221,9 +221,9 @@ setTimeout(revealAll, 300);
 // ---- Contact form ----
 // Replace the three values below with your EmailJS credentials.
 // Setup: https://www.emailjs.com → Email Services → Email Templates → Account > API Keys
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID  = 'service_i4m1wte';
+const EMAILJS_TEMPLATE_ID = 'template_34ur8yp';
+const EMAILJS_PUBLIC_KEY  = 'qO0BK3vnPewwfUYYe';
 
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
