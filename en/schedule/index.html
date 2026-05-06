@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <base href="../../">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View the current class schedule at Polaris Center, Yerevan.">
+  <title>Schedule | Polaris Center</title>
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+
+      <a href="./" class="site-logo" aria-label="Polaris Center — Home">
+      <img src="public/images/logo.png" alt="Polaris Center" height="36" width="130" loading="eager">
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li><a href="./" class="nav-link" data-i18n="nav.home">Home</a></li>
+          <li class="nav-item--dropdown">
+            <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+              <span data-i18n="nav.programs">Programs</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="gymnastics/" class="nav-dropdown-link" data-i18n="nav.gymnastics">Gymnastics</a></li>
+              <li><a href="development/" class="nav-dropdown-link" data-i18n="nav.development">Development</a></li>
+              <li><a href="english/" class="nav-dropdown-link" data-i18n="nav.english">English</a></li>
+              <li><a href="theatre/" class="nav-dropdown-link" data-i18n="nav.theatre">Theatre</a></li>
+              <li><a href="school-prep/" class="nav-dropdown-link" data-i18n="nav.schoolPrep">School Preparation</a></li>
+              <li><a href="robotics/" class="nav-dropdown-link" data-i18n="nav.robotics">Robotics</a></li>
+            </ul>
+          </li>
+          <li><a href="about/" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="contact/" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <div class="lang-switcher" aria-label="Select language">
+          <button class="lang-switcher__trigger" aria-expanded="false" aria-haspopup="listbox">
+            <span class="lang-switcher__current">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-switcher__dropdown" role="listbox">
+            <li><button class="lang-btn" data-locale="en" role="option">EN</button></li>
+            <li><button class="lang-btn" data-locale="ru" role="option">RU</button></li>
+            <li><button class="lang-btn" data-locale="hy" role="option">HY</button></li>
+          </ul>
+        </div>
+        <a href="contact/" class="btn btn--primary btn--sm header-cta" data-i18n="nav.enroll">Enroll Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <ul role="list">
+      <li><a href="./" data-i18n="nav.home">Home</a></li>
+      <li class="mobile-nav-group">
+        <button class="mobile-nav-group-toggle">
+          <span data-i18n="nav.programs">Programs</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <ul role="list">
+          <li><a href="gymnastics/" data-i18n="nav.gymnastics">Gymnastics</a></li>
+          <li><a href="development/" data-i18n="nav.development">Development</a></li>
+          <li><a href="english/" data-i18n="nav.english">English</a></li>
+          <li><a href="theatre/" data-i18n="nav.theatre">Theatre</a></li>
+          <li><a href="school-prep/" data-i18n="nav.schoolPrep">School Preparation</a></li>
+          <li><a href="robotics/" data-i18n="nav.robotics">Robotics</a></li>
+        </ul>
+      </li>
+      <li><a href="about/" data-i18n="nav.about">About</a></li>
+      <li><a href="contact/" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <div class="lang-switcher" role="group" aria-label="Select language">
+        <button class="lang-btn" data-locale="en">EN</button>
+        <button class="lang-btn" data-locale="ru">RU</button>
+        <button class="lang-btn" data-locale="hy">HY</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="schedule-page">
+        <h1 class="schedule-page__title" data-i18n="schedule.title">Class Schedule</h1>
+        <button class="schedule-page__trigger" id="scheduleImgTrigger" aria-label="View full schedule image">
+          <img src="public/images/schedule.webp" alt="Class schedule" data-i18n-aria-label="schedule.imgAlt" loading="eager">
+          <span class="schedule-page__zoom-hint" aria-hidden="true">Click to enlarge</span>
+        </button>
+      </div>
+    </div>
+
+    <dialog class="schedule-lightbox" id="scheduleLightbox" aria-label="Full schedule image">
+      <button class="schedule-lightbox__close" id="scheduleLightboxClose" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <img src="public/images/schedule.webp" alt="Class schedule">
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="public/images/logo.png" alt="Polaris Center" height="36" width="130" loading="lazy">
+        <p class="footer-tagline" data-i18n="footer.tagline">Where children grow, learn, and discover.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/polaris.yerevan" class="footer-social__link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/polariseducationcenter/" class="footer-social__link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.programs">Programs</h3>
+        <ul role="list">
+          <li><a href="gymnastics/" data-i18n="nav.gymnastics">Gymnastics</a></li>
+          <li><a href="development/" data-i18n="nav.development">Development</a></li>
+          <li><a href="english/" data-i18n="nav.english">English</a></li>
+          <li><a href="theatre/" data-i18n="nav.theatre">Theatre</a></li>
+          <li><a href="school-prep/" data-i18n="nav.schoolPrep">School Preparation</a></li>
+          <li><a href="robotics/" data-i18n="nav.robotics">Robotics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.company">Info</h3>
+        <ul role="list">
+          <li><a href="about/" data-i18n="nav.about">About</a></li>
+          <li><a href="contact/" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="nav.contact">Contact</h3>
+        <address class="footer-contact-info">
+          <span data-i18n="footer.address">17 Sundukyan St, Yerevan 0012</span>
+          <a href="tel:+37444171579" data-i18n="footer.phone">+374 44 171579</a>
+          <a href="mailto:info@polariscenter.am" data-i18n="footer.email">info@polariscenter.am</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bar container">
+      <span>© <span id="footerYear"></span> Polaris Education Center</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    (function () {
+      var trigger = document.getElementById('scheduleImgTrigger');
+      var dialog  = document.getElementById('scheduleLightbox');
+      var closeBtn = document.getElementById('scheduleLightboxClose');
+      if (!trigger || !dialog) return;
+      trigger.addEventListener('click', function () { dialog.showModal(); });
+      closeBtn.addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dialog.close(); });
+    })();
+  </script>
+</body>
+</html>

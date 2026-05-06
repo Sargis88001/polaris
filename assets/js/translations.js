@@ -252,6 +252,10 @@ const TRANSLATIONS = {
       "address": "17 Sundukyan St, Yerevan 0012"
     }
   },
+  "schedule": {
+    "title": "Class Schedule",
+    "imgAlt": "Polaris Center class schedule"
+  },
   "footer": {
     "tagline": "Where children grow, learn, and discover.",
     "programs": "Programs",
@@ -560,6 +564,10 @@ const TRANSLATIONS = {
       "address": "ул. Сундукяна 17, Ереван 0012"
     }
   },
+  "schedule": {
+    "title": "Расписание занятий",
+    "imgAlt": "Расписание занятий Polaris Center"
+  },
   "footer": {
     "tagline": "Где дети растут, учатся и открывают мир.",
     "programs": "Программы",
@@ -867,6 +875,10 @@ const TRANSLATIONS = {
       "hoursWeekend": "Շբթ. · 10:00-17:00",
       "address": "Սունդուկյան փ. 17, Երևան 0012"
     }
+  },
+  "schedule": {
+    "title": "Պարապմունքների ժամանակացույց",
+    "imgAlt": "Polaris Center-ի պարապմունքների ժամանակացույց"
   },
   "footer": {
     "tagline": "Որտեղ երեխաներն աճում, սովորում և բացահայտում են։",
