@@ -519,8 +519,9 @@ button { cursor: pointer; border: none; background: none; }
   border-color: transparent;
   color: var(--color-text-inverse);
 }
-.pillar-card--featured h3 { color: var(--color-text-inverse); }
-.pillar-card--featured p { color: rgba(249,248,244,0.7); }
+.pillar-card.pillar-card--featured .pillar-num { color: rgba(249,248,244,0.5); }
+.pillar-card.pillar-card--featured h3 { color: var(--color-text-inverse); }
+.pillar-card.pillar-card--featured p { color: rgba(249,248,244,0.7); }
 .pillar-num {
   font-size: 0.72rem;
   font-weight: 700;
