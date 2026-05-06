@@ -48,7 +48,7 @@ const TRANSLATIONS = {
     "hy": "Armenian"
   },
   "home": {
-    "kicker": "Ages 3 to 16 · Yerevan",
+    "kicker": "Polaris Center",
     "heroTitle": "Where children grow, {accent}, and discover.",
     "heroAccent": "learn",
     "heroLede": "A modern center for gymnastics, English, theatre, robotics, and creative development. Six programs designed by educators who believe great teaching feels like play.",
@@ -356,7 +356,7 @@ const TRANSLATIONS = {
     "hy": "Армянский"
   },
   "home": {
-    "kicker": "Возраст 3–16 · Ереван",
+    "kicker": "Polaris Center",
     "heroTitle": "Где дети растут, {accent}, и открывают мир.",
     "heroAccent": "учатся",
     "heroLede": "Современный центр гимнастики, английского, театра, робототехники и творческого развития. Шесть программ, созданных педагогами, которые верят: настоящее обучение похоже на игру.",
@@ -664,7 +664,7 @@ const TRANSLATIONS = {
     "hy": "Հայերեն"
   },
   "home": {
-    "kicker": "Տարիք 3-ից 16 · Երևան",
+    "kicker": "Polaris Center",
     "heroTitle": "Որտեղ երեխաներն աճում, {accent}, և բացահայտում են։",
     "heroAccent": "սովորում",
     "heroLede": "Մարմնամարզության, անգլերենի, թատրոնի, ռոբոտաշինության և ստեղծագործական զարգացման ժամանակակից կենտրոն։ Վեց ծրագիր՝ ստեղծված մանկավարժների կողմից, որոնք հավատում են, որ իսկական ուսուցումը խաղի պես է զգացվում։",

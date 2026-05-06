@@ -778,7 +778,7 @@ button { cursor: pointer; border: none; background: none; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: #fff;
   margin-bottom: var(--space-5);
 }
 .home-hero__title {
@@ -790,7 +790,7 @@ button { cursor: pointer; border: none; background: none; }
   color: #fff;
   margin-bottom: var(--space-6);
 }
-.home-hero__title em { color: var(--color-primary); font-style: normal; }
+.home-hero__title em { color: #fff; font-style: normal; }
 .home-hero__lede {
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.75;
