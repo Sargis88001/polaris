@@ -687,7 +687,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 .cta-band__decor {
   position: absolute;
-  right: -120px;
+  left: -120px;
   top: 50%;
   transform: translateY(-50%);
   width: 480px;
