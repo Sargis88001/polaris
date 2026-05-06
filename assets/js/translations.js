@@ -23,7 +23,8 @@ const TRANSLATIONS = {
     "programs": "Programs",
     "enroll": "Enroll Now",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "schedule": "View Schedule"
   },
   "common": {
     "learnMore": "Learn more",
@@ -335,7 +336,8 @@ const TRANSLATIONS = {
     "programs": "Программы",
     "enroll": "Записаться",
     "openMenu": "Открыть меню",
-    "closeMenu": "Закрыть меню"
+    "closeMenu": "Закрыть меню",
+    "schedule": "Расписание"
   },
   "common": {
     "learnMore": "Подробнее",
@@ -647,7 +649,8 @@ const TRANSLATIONS = {
     "programs": "Ծրագրեր",
     "enroll": "Գրանցվել",
     "openMenu": "Բացել ընտրացանկը",
-    "closeMenu": "Փակել ընտրացանկը"
+    "closeMenu": "Փակել ընտրացանկը",
+    "schedule": "Ժամանակացույց"
   },
   "common": {
     "learnMore": "Մանրամասն",
