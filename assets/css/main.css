@@ -356,6 +356,23 @@ button { cursor: pointer; border: none; background: none; }
   border-bottom: 1px solid var(--color-divider);
 }
 .mobile-nav-footer { margin-top: auto; padding-top: var(--space-6); }
+.mobile-nav .lang-switcher__trigger {
+  width: 100%;
+  justify-content: space-between;
+}
+.mobile-nav .lang-switcher__dropdown {
+  position: static;
+  opacity: 1;
+  transform: none;
+  box-shadow: none;
+  margin-top: var(--space-2);
+  display: none;
+  pointer-events: none;
+}
+.mobile-nav .lang-switcher.is-open .lang-switcher__dropdown {
+  display: block;
+  pointer-events: auto;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
