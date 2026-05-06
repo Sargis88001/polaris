@@ -695,6 +695,7 @@ button { cursor: pointer; border: none; background: none; }
   background: radial-gradient(circle, #e0834c 0%, transparent 65%);
   opacity: 0.35;
   pointer-events: none;
+  z-index: 0;
 }
 .cta-band__inner {
   display: flex;
@@ -702,6 +703,8 @@ button { cursor: pointer; border: none; background: none; }
   justify-content: space-between;
   gap: var(--space-8);
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 .cta-band h2 {
   font-family: var(--font-display);
