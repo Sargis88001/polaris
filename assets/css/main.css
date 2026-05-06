@@ -680,8 +680,21 @@ button { cursor: pointer; border: none; background: none; }
 
 /* ---------- CTA band ---------- */
 .cta-band {
-  background: var(--color-dark);
+  background: #1f2a55;
+  position: relative;
+  overflow: hidden;
   padding-block: clamp(3rem, 6vw, 5rem);
+}
+.cta-band__decor {
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #e0834c 0%, transparent 65%);
+  opacity: 0.35;
+  pointer-events: none;
 }
 .cta-band__inner {
   display: flex;
