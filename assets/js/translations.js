@@ -255,7 +255,7 @@ const TRANSLATIONS = {
   "footer": {
     "tagline": "Where children grow, learn, and discover.",
     "programs": "Programs",
-    "company": "Company",
+    "company": "Info",
     "resources": "Resources",
     "follow": "Follow us",
     "rights": "All rights reserved.",
@@ -563,7 +563,7 @@ const TRANSLATIONS = {
   "footer": {
     "tagline": "Где дети растут, учатся и открывают мир.",
     "programs": "Программы",
-    "company": "О компании",
+    "company": "Информация",
     "resources": "Ресурсы",
     "follow": "Соцсети",
     "rights": "Все права защищены.",
@@ -871,7 +871,7 @@ const TRANSLATIONS = {
   "footer": {
     "tagline": "Որտեղ երեխաներն աճում, սովորում և բացահայտում են։",
     "programs": "Ծրագրեր",
-    "company": "Ընկերություն",
+    "company": "Տեղեկություններ",
     "resources": "Ռեսուրսներ",
     "follow": "Հետևել",
     "rights": "Բոլոր իրավունքները պաշտպանված են։",
