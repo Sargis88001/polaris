@@ -220,7 +220,6 @@ setTimeout(revealAll, 300);
 
 // ---- Contact form ----
 // Replace the three values below with your EmailJS credentials.
-// Setup: https://www.emailjs.com → Email Services → Email Templates → Account > API Keys
 const EMAILJS_SERVICE_ID  = 'service_i4m1wte';
 const EMAILJS_TEMPLATE_ID = 'template_34ur8yp';
 const EMAILJS_PUBLIC_KEY  = 'qO0BK3vnPewwfUYYe';
@@ -254,7 +253,9 @@ if (contactForm) {
 
     const btn = contactForm.querySelector('[type="submit"]');
     const originalLabel = btn.textContent;
-    btn.textContent = 'Sending…';
+    const lang = getLang();
+    const t = (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang]) ? TRANSLATIONS[lang] : null;
+    btn.textContent = (t && t.contact.form.submitting) || 'Sending…';
     btn.disabled = true;
 
     Promise.resolve()
@@ -270,11 +271,13 @@ if (contactForm) {
       }, EMAILJS_PUBLIC_KEY);
     })
     .then(function () {
+      const successTitle = (t && t.contact.form.successTitle) || 'Thank you';
+      const successText  = (t && t.contact.form.successText)  || 'Your message is on its way. We will reply within one working day.';
       contactForm.innerHTML =
         '<div style="text-align:center;padding:3rem 0">' +
           '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2" style="margin:0 auto 1rem"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>' +
-          '<h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:.5rem">Thank you</h3>' +
-          '<p style="color:var(--color-text-muted)">Your message is on its way. We will reply within one working day.</p>' +
+          '<h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:.5rem">' + successTitle.replace(/[<>&]/g, (c) => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c])) + '</h3>' +
+          '<p style="color:var(--color-text-muted)">' + successText.replace(/[<>&]/g, (c) => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c])) + '</p>' +
         '</div>';
     })
     .catch(function (err) {
