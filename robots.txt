@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block language-specific asset paths (crawlers should use canonical URLs)
+Disallow: /assets/
+
+# Sitemap
+Sitemap: https://polariscenter.am/sitemap.xml
