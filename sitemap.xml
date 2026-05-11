@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://polariscenter.am/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Programs -->
+  <url>
+    <loc>https://polariscenter.am/programs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/programs/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/programs/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/programs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/programs/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Gymnastics -->
+  <url>
+    <loc>https://polariscenter.am/gymnastics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/gymnastics/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/gymnastics/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/gymnastics/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/gymnastics/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Development -->
+  <url>
+    <loc>https://polariscenter.am/development/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/development/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/development/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/development/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/development/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://polariscenter.am/english/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/english/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/english/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/english/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/english/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Theatre -->
+  <url>
+    <loc>https://polariscenter.am/theatre/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/theatre/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/theatre/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/theatre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/theatre/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- School Prep -->
+  <url>
+    <loc>https://polariscenter.am/school-prep/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/school-prep/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/school-prep/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/school-prep/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/school-prep/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Robotics -->
+  <url>
+    <loc>https://polariscenter.am/robotics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/robotics/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/robotics/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/robotics/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/robotics/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://polariscenter.am/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/about/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/about/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://polariscenter.am/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/contact/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/contact/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Schedule -->
+  <url>
+    <loc>https://polariscenter.am/schedule/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/schedule/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/schedule/"/>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/schedule/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/schedule/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
