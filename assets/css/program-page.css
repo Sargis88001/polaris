@@ -1,0 +1,231 @@
+/* =========================================================
+   program-page.css — Program page enhancements
+   Depends on main.css. Uses only permitted tokens.
+   ========================================================= */
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb-nav {
+  background: var(--color-surface-2);
+  border-bottom: 1px solid var(--color-divider);
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  list-style: none;
+  padding: var(--space-4) 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.breadcrumb li + li::before {
+  content: '›';
+  margin-right: var(--space-2);
+  color: var(--color-text-faint);
+}
+.breadcrumb a {
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+.breadcrumb a:hover { color: var(--color-primary); }
+.breadcrumb [aria-current="page"] { color: var(--color-text); font-weight: 500; }
+
+/* ---------- Hero stat row ---------- */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-stat__num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.hero-stat__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(249,248,244,0.55);
+}
+.hero-stat__divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+@media (max-width: 480px) {
+  .hero-stats { justify-content: center; }
+  .hero-stat { align-items: center; }
+  .hero-stat__divider { display: none; }
+}
+
+/* ---------- Hero CTA row ---------- */
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+
+/* ---------- Learn grid (2×2) ---------- */
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+@media (max-width: 640px) { .learn-grid { grid-template-columns: 1fr; } }
+.learn-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: box-shadow var(--transition);
+}
+.learn-card:hover { box-shadow: var(--shadow-sm); }
+.learn-card__icon {
+  width: 44px;
+  height: 44px;
+  background: var(--color-surface-offset);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.learn-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.learn-card__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* ---------- Availability badges ---------- */
+.avail-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+.avail-badge--open {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+.avail-badge--few {
+  background: rgba(52,45,139,0.08);
+  border: 1px solid transparent;
+  color: var(--color-primary);
+}
+.avail-badge--waitlist {
+  background: var(--color-surface-offset);
+  border: 1px solid transparent;
+  color: var(--color-text-faint);
+}
+
+/* ---------- Instructor block ---------- */
+.instructor-block {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-10);
+  align-items: start;
+  margin-top: var(--space-10);
+}
+@media (max-width: 640px) { .instructor-block { grid-template-columns: 1fr; } }
+.instructor-photo {
+  width: 200px;
+  height: 200px;
+  background: var(--color-surface-offset);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .instructor-photo {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--radius-xl);
+  }
+}
+.instructor-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+.instructor-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+.instructor-bio {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+}
+.instructor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.skill-tag {
+  display: inline-block;
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  padding: 5px 12px;
+}
+
+/* ---------- FAQ list ---------- */
+.faq-list {
+  max-width: 720px;
+  margin-top: var(--space-10);
+}
+.faq-item {
+  border-bottom: 1px solid var(--color-divider);
+  padding: var(--space-5) 0;
+}
+.faq-item:first-child { padding-top: 0; }
+.faq-q {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.faq-a {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}

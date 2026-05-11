@@ -1,16 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <base href="../../">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A theatre program that turns shy whispers into confident voices.">
+  <meta name="description" content="A theatre program that builds voice, presence, and confidence. Ends every term in a real performance.">
   <title>Theatre | Polaris Center</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/program-page.css">
 </head>
 <body>
 
@@ -92,62 +93,186 @@
 
   <main id="main-content">
 
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <div class="container">
+        <ol class="breadcrumb" role="list">
+          <li><a href="./">Home</a></li>
+          <li aria-current="page">Theatre</li>
+        </ol>
+      </div>
+    </nav>
+
     <section class="page-hero">
       <div class="page-hero__bg"><img src="public/images/hero-theatre.webp" alt="" loading="eager"></div>
       <div class="page-hero__content container">
         <span class="page-hero__badge">PROGRAMS · THEATRE</span>
         <h1 class="page-hero__title" data-i18n="theatre.heroTitle">Voice, presence, and the joy of being heard.</h1>
         <p class="page-hero__lede" data-i18n="theatre.heroLede">A theatre program that turns shy whispers into clear, confident voices, ending every term in a real performance.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat__num">12</span>
+            <span class="hero-stat__label">Max class size</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">2</span>
+            <span class="hero-stat__label">Companies</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">5</span>
+            <span class="hero-stat__label">Years running</span>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="contact/" class="btn btn--primary btn--lg">Book a free trial →</a>
+          <a href="schedule/" class="btn btn--ghost-light btn--lg">View schedule</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="intro-grid reveal">
-          <div>
-            <span class="eyebrow" data-i18n="nav.theatre">Theatre</span>
-            <h2 class="section-title" data-i18n="theatre.whatTitle">What a term looks like</h2>
-          </div>
-          <p class="section-lede">Each term ends in a real performance, with lights, an audience, and a curtain call. The journey there is twelve quiet weeks of voice, presence, and trust.</p>
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">What your child will learn</span>
+          <h2 class="section-title">Skills that belong on every stage.</h2>
+          <p class="section-lede">Theatre teaches children to inhabit a room — to use their body, voice, and attention as deliberate tools. These skills travel far beyond the stage.</p>
         </div>
-        <div class="pillar-grid stagger">
-          <article class="pillar-card">
-            <span class="pillar-num">Weeks 1-3</span>
-            <h3>Voice and breath</h3>
-            <p>Warm-ups, games, listening exercises. The room becomes safe enough to be heard in.</p>
+        <div class="learn-grid stagger">
+          <article class="learn-card">
+            <div class="learn-card__icon">🎤</div>
+            <h3 class="learn-card__title">Voice & projection</h3>
+            <p class="learn-card__desc">Breath control, resonance, clarity, and pace. Children learn to fill a room without shouting and to hold silence without fidgeting.</p>
           </article>
-          <article class="pillar-card pillar-card--featured">
-            <span class="pillar-num">Weeks 4-7</span>
-            <h3>Scene work</h3>
-            <p>Short scenes, simple texts, real stakes. Children take turns leading and listening.</p>
+          <article class="learn-card">
+            <div class="learn-card__icon">🎭</div>
+            <h3 class="learn-card__title">Stage presence & movement</h3>
+            <p class="learn-card__desc">How to stand, move with intention, and hold an audience's attention without saying a word. Blocking, gesture, and spatial awareness trained through scene work.</p>
           </article>
-          <article class="pillar-card">
-            <span class="pillar-num">Weeks 8-10</span>
-            <h3>Building the show</h3>
-            <p>The piece comes together. Lines learned, blocking set, costumes chosen.</p>
+          <article class="learn-card">
+            <div class="learn-card__icon">💭</div>
+            <h3 class="learn-card__title">Emotional expression</h3>
+            <p class="learn-card__desc">Accessing and communicating a specific feeling convincingly — one of the hardest and most human skills. Theatre is the best classroom for it.</p>
           </article>
-          <article class="pillar-card">
-            <span class="pillar-num">Weeks 11-12</span>
-            <h3>Performance</h3>
-            <p>Two evenings, one matinee, a full audience. Then a quiet conversation about what we learned.</p>
+          <article class="learn-card">
+            <div class="learn-card__icon">🫱🏽‍🫲🏻</div>
+            <h3 class="learn-card__title">Teamwork & listening</h3>
+            <p class="learn-card__desc">A scene only works if both actors are present. Children learn to listen as a professional skill — to respond to what is actually said, not what they expected.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">Weekly schedule</span>
+          <h2 class="section-title">Junior and senior companies.</h2>
+        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Time</th>
+              <th>Company</th>
+              <th>Ages</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tue &amp; Thu</td>
+              <td>15:30 – 17:00</td>
+              <td>Junior company</td>
+              <td>6 – 10</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+            <tr>
+              <td>Mon &amp; Wed</td>
+              <td>16:00 – 18:00</td>
+              <td>Senior company</td>
+              <td>11 – 16</td>
+              <td><span class="avail-badge avail-badge--few">2 spots left</span></td>
+            </tr>
+            <tr>
+              <td>Sat</td>
+              <td>10:00 – 12:00</td>
+              <td>Intensive workshop</td>
+              <td>All ages</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+            <tr>
+              <td>Fri</td>
+              <td>17:00 – 19:00</td>
+              <td>Performance prep</td>
+              <td>Senior only</td>
+              <td><span class="avail-badge avail-badge--waitlist">Waitlist</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  <section class="cta-band">
-    <div class="container cta-band__inner reveal">
-      <div class="cta-band__text">
-        <h2 data-i18n="theatre.ctaTitle">Auditions are open.</h2>
-        <p data-i18n="theatre.ctaLede">No experience needed, just a child who would like to try. Send us a message and we will book a workshop.</p>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Your instructor</span>
+        <div class="instructor-block reveal">
+          <div class="instructor-photo">AG</div>
+          <div class="instructor-info">
+            <h2 class="instructor-name">Aram Grigoryan</h2>
+            <p class="instructor-role">Theatre Director & Coach</p>
+            <p class="instructor-bio">Trained at the Yerevan State Theatre Institute with five years directing children's productions. Aram's focus is on building confidence rather than polish — he believes a child who speaks with conviction in an empty room will manage a full one. Every term ends in a real performance with a real audience, not a parent showcase in the studio.</p>
+            <div class="instructor-tags">
+              <span class="skill-tag">Theatre Institute</span>
+              <span class="skill-tag">Director</span>
+              <span class="skill-tag">5 yrs teaching</span>
+              <span class="skill-tag">Ages 6 – 16</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cta-band__actions">
-        <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
-        <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+    </section>
+
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-q">Does my child need any experience to join?</h3>
+            <p class="faq-a">No. Both companies welcome beginners every term. The first three weeks are specifically designed to settle new members into the group before any scene work begins. Many of our most confident performers arrived with no experience at all.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">What happens at the end-of-term performance?</h3>
+            <p class="faq-a">A real show — two evenings and one matinee in a proper venue, with lights, a curtain, and a paying audience. Not a rehearsal in front of parents. Children find this genuinely thrilling, not frightening, because they are prepared for it.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">How do you handle a child who is very shy?</h3>
+            <p class="faq-a">Carefully and without pressure. The program is specifically designed for shy children — many of our parents enrol precisely because of it. The first weeks are about building safety in the group, not performing. Nobody is asked to do anything alone before they are ready.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Can parents attend rehearsals?</h3>
+            <p class="faq-a">Parents are welcome at the final dress rehearsal, held the day before opening night. Regular rehearsals are closed to adults — the children need the room to be theirs. We send a short update after each session.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <div class="cta-band__text">
+          <h2 data-i18n="theatre.ctaTitle">Auditions are open.</h2>
+          <p data-i18n="theatre.ctaLede">No experience needed, just a child who would like to try. Send us a message and we will book a workshop.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
+          <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -192,7 +317,7 @@
       </div>
     </div>
     <div class="footer-bar container">
-      <span>© <span id="footerYear"></span> Polaris Center. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span>© <span id="footerYear"></span> Polaris Education Center</span>
     </div>
   </footer>
 

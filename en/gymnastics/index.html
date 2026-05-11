@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/program-page.css">
 </head>
 <body>
 
@@ -92,22 +93,40 @@
 
   <main id="main-content">
 
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <div class="container">
+        <ol class="breadcrumb" role="list">
+          <li><a href="./">Home</a></li>
+          <li aria-current="page">Gymnastics</li>
+        </ol>
+      </div>
+    </nav>
+
     <section class="page-hero">
       <div class="page-hero__bg"><img src="public/images/hero-gymnastics.webp" alt="" loading="eager"></div>
       <div class="page-hero__content container">
         <span class="page-hero__badge">PROGRAMS · GYMNASTICS</span>
         <h1 class="page-hero__title" data-i18n="gymnastics.heroTitle">Strength, balance, courage, on the mat.</h1>
         <p class="page-hero__lede" data-i18n="gymnastics.heroLede">From first forward roll to confident competition, a real gymnastics program in central Yerevan.</p>
-      </div>
-    </section>
-
-    <section class="section section--offset">
-      <div class="container">
-        <div class="reveal" style="max-width:640px">
-          <h2 class="section-title" data-i18n="gymnastics.coachesTitle">Our coaches</h2>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat__num">10</span>
+            <span class="hero-stat__label">Max class size</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">3</span>
+            <span class="hero-stat__label">Skill levels</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">8</span>
+            <span class="hero-stat__label">Years running</span>
+          </div>
         </div>
-        <div class="coaches-grid stagger">
-          <article class="coach-card"><h3>Mariam Petrosyan</h3><span class="coach-role">Lead Gymnastics Coach</span><p>Former national-level gymnast. Twelve years coaching children. Famous in the studio for warm-up routines.</p></article><article class="coach-card"><h3>Anna Mkrtchyan</h3><span class="coach-role">Founder · Head of Curriculum</span><p>Twelve years teaching ages 3 to 7. Trained in Reggio and Montessori. Believes the best lesson plan is a calm room.</p></article>
+        <div class="hero-ctas">
+          <a href="contact/" class="btn btn--primary btn--lg">Book a free trial →</a>
+          <a href="schedule/" class="btn btn--ghost-light btn--lg">View schedule</a>
         </div>
       </div>
     </section>
@@ -115,29 +134,145 @@
     <section class="section">
       <div class="container">
         <div class="reveal" style="max-width:640px">
-          <h2 class="section-title" data-i18n="gymnastics.galleryTitle">Inside the gym</h2>
+          <span class="eyebrow">What your child will learn</span>
+          <h2 class="section-title">Skills that last beyond the mat.</h2>
+          <p class="section-lede">Every session builds physical capability alongside the quieter qualities: focus, persistence, and comfort with challenge.</p>
         </div>
-        <div class="gallery-grid stagger">
-          <figure class="gallery-item"><img src="public/images/gallery-gym-1.webp" alt="" loading="lazy"></figure>
-          <figure class="gallery-item"><img src="public/images/gallery-gym-2.webp" alt="" loading="lazy"></figure>
-          <figure class="gallery-item"><img src="public/images/gallery-gym-3.webp" alt="" loading="lazy"></figure>
+        <div class="learn-grid stagger">
+          <article class="learn-card">
+            <div class="learn-card__icon">🤸</div>
+            <h3 class="learn-card__title">Body coordination</h3>
+            <p class="learn-card__desc">Spatial awareness, bilateral coordination, and controlled movement — skills that transfer directly to sport, school, and daily life.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">💪</div>
+            <h3 class="learn-card__title">Flexibility & strength</h3>
+            <p class="learn-card__desc">Progressive conditioning that builds genuine strength, not just performance. Children learn to care for their bodies from the first lesson.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">🏅</div>
+            <h3 class="learn-card__title">Confidence under pressure</h3>
+            <p class="learn-card__desc">Attempting a new skill in front of others, falling, and trying again. Gymnastics teaches composure in a way few other programs do.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">⚖️</div>
+            <h3 class="learn-card__title">Balance & agility</h3>
+            <p class="learn-card__desc">Beam, floor, and vault work that develops proprioception and fast-twitch reflexes alongside patience and precision.</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">Weekly schedule</span>
+          <h2 class="section-title">Find the right slot.</h2>
+        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Time</th>
+              <th>Group</th>
+              <th>Ages</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mon &amp; Wed</td>
+              <td>15:00 – 16:00</td>
+              <td>Beginners</td>
+              <td>4 – 7</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+            <tr>
+              <td>Tue &amp; Thu</td>
+              <td>16:00 – 17:00</td>
+              <td>Intermediate</td>
+              <td>8 – 12</td>
+              <td><span class="avail-badge avail-badge--few">2 spots left</span></td>
+            </tr>
+            <tr>
+              <td>Sat</td>
+              <td>10:00 – 12:00</td>
+              <td>Advanced</td>
+              <td>12 – 16</td>
+              <td><span class="avail-badge avail-badge--waitlist">Waitlist</span></td>
+            </tr>
+            <tr>
+              <td>Wed &amp; Fri</td>
+              <td>17:00 – 18:00</td>
+              <td>Junior team</td>
+              <td>9 – 13</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  <section class="cta-band">
-    <div class="container cta-band__inner reveal">
-      <div class="cta-band__text">
-        <h2 data-i18n="gymnastics.ctaTitle">Try a free first class.</h2>
-        <p data-i18n="gymnastics.ctaLede">Send a message and we will book you a slot in the right group.</p>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Your instructor</span>
+        <div class="instructor-block reveal">
+          <div class="instructor-photo">MP</div>
+          <div class="instructor-info">
+            <h2 class="instructor-name">Mariam Petrosyan</h2>
+            <p class="instructor-role">Lead Gymnastics Coach</p>
+            <p class="instructor-bio">Former national-level gymnast with twelve years of coaching experience across all age groups. Mariam's approach is technically rigorous but never anxious — she builds children up through small, deliberate wins. She is famous in the studio for warm-up routines that children actually look forward to, and for remembering exactly where each child left off last session.</p>
+            <div class="instructor-tags">
+              <span class="skill-tag">National Competitor</span>
+              <span class="skill-tag">12 yrs coaching</span>
+              <span class="skill-tag">Certified trainer</span>
+              <span class="skill-tag">Ages 4 – 16</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cta-band__actions">
-        <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
-        <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+    </section>
+
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-q">What age can children start?</h3>
+            <p class="faq-a">From age 4, with no prior experience needed. Our Beginners group is specifically designed for children who have never been on a mat before. We place every new child after a short, informal assessment.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">What should my child wear?</h3>
+            <p class="faq-a">Comfortable, fitted sportswear with no zips, hard buttons, or loose strings. Bare feet on the mat. Long hair should be tied back. We provide all equipment.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">How often should my child attend?</h3>
+            <p class="faq-a">Two sessions per week is the minimum for meaningful physical progress. Children in the Junior team attend three times. One session a week is fine for children who come primarily for enjoyment and general fitness.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Is there a performance or competition at the end of term?</h3>
+            <p class="faq-a">Advanced and Junior team groups participate in regional competitions when children are ready and willing. It is never required. All groups hold an informal showcase at the end of the year, which is low-key and celebratory rather than competitive.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <div class="cta-band__text">
+          <h2 data-i18n="gymnastics.ctaTitle">Try a free first class.</h2>
+          <p data-i18n="gymnastics.ctaLede">Send a message and we will book you a slot in the right group.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
+          <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">

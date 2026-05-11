@@ -1,16 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <base href="../../">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="From LEGO Mindstorms to Arduino and Python, ages 7 to 16.">
+  <meta name="description" content="From LEGO Mindstorms to Arduino and Python. Three levels of robotics for ages 7 to 16.">
   <title>Robotics | Polaris Center</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/program-page.css">
 </head>
 <body>
 
@@ -92,42 +93,186 @@
 
   <main id="main-content">
 
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <div class="container">
+        <ol class="breadcrumb" role="list">
+          <li><a href="./">Home</a></li>
+          <li aria-current="page">Robotics</li>
+        </ol>
+      </div>
+    </nav>
+
     <section class="page-hero">
       <div class="page-hero__bg"><img src="public/images/hero-robotics.webp" alt="" loading="eager"></div>
       <div class="page-hero__content container">
         <span class="page-hero__badge">PROGRAMS · ROBOTICS</span>
         <h1 class="page-hero__title" data-i18n="robotics.heroTitle">Build it, code it, watch it work.</h1>
         <p class="page-hero__lede" data-i18n="robotics.heroLede">From LEGO Mindstorms to Arduino and Python, three levels that build serious skill through serious projects.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat__num">8</span>
+            <span class="hero-stat__label">Max class size</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">3</span>
+            <span class="hero-stat__label">Skill levels</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">4</span>
+            <span class="hero-stat__label">Years running</span>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="contact/" class="btn btn--primary btn--lg">Book a free trial →</a>
+          <a href="schedule/" class="btn btn--ghost-light btn--lg">View schedule</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="intro-grid reveal">
-          <div>
-            <span class="eyebrow" data-i18n="nav.robotics">Robotics</span>
-            <h2 class="section-title" data-i18n="robotics.tracksTitle">Three tracks</h2>
-          </div>
-          <p class="section-lede">Three levels that build serious skill through serious projects. Children move up only when they are ready, not when the year ends.</p>
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">What your child will learn</span>
+          <h2 class="section-title">How to make things that actually work.</h2>
+          <p class="section-lede">Every project is real — something to build, test, break, and fix. The skills that emerge are computational, creative, and deeply practical.</p>
         </div>
-        <div class="tracks-grid stagger"><article class="track-card"><span class="track-num">01</span><span class="track-age">AGES 7-9</span><h3>Junior · LEGO Mindstorms</h3><p>First circuits, first code blocks, first robot that follows a line. Curiosity becomes a working machine.</p></article><article class="track-card"><span class="track-num">02</span><span class="track-age">AGES 10-13</span><h3>Builder · Arduino</h3><p>Real sensors, real wiring, real bugs to fix. Children move from blocks to written code, one careful step at a time.</p></article><article class="track-card"><span class="track-num">03</span><span class="track-age">AGES 14-16</span><h3>Maker · Python</h3><p>A full term project. Children pick the problem, design the build, ship a working prototype, and present it.</p></article>
+        <div class="learn-grid stagger">
+          <article class="learn-card">
+            <div class="learn-card__icon">🧠</div>
+            <h3 class="learn-card__title">Computational thinking</h3>
+            <p class="learn-card__desc">Breaking a problem into steps, spotting patterns, and designing a repeatable solution — the core skill underneath every programming language and every engineering discipline.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">⚡</div>
+            <h3 class="learn-card__title">Electronics & circuits</h3>
+            <p class="learn-card__desc">Real sensors, motors, LEDs, and wiring. Children understand electricity before they automate it, so the code they write makes physical sense.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">💻</div>
+            <h3 class="learn-card__title">Coding — Scratch, Arduino & Python</h3>
+            <p class="learn-card__desc">Each level progresses from visual block coding to written code. By the Maker track, children write functional Python and can explain what every line does.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">🔧</div>
+            <h3 class="learn-card__title">Debugging & problem-solving</h3>
+            <p class="learn-card__desc">When the robot doesn't do what the code says, children learn to investigate rather than panic. Debugging is a skill — and one of the most transferable ones we teach.</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">Weekly schedule</span>
+          <h2 class="section-title">Three tracks, one lab.</h2>
+        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Time</th>
+              <th>Track</th>
+              <th>Ages</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sat</td>
+              <td>10:00 – 12:00</td>
+              <td>Junior · LEGO Mindstorms</td>
+              <td>7 – 9</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+            <tr>
+              <td>Sat</td>
+              <td>13:00 – 15:30</td>
+              <td>Builder · Arduino</td>
+              <td>10 – 13</td>
+              <td><span class="avail-badge avail-badge--few">2 spots left</span></td>
+            </tr>
+            <tr>
+              <td>Sun</td>
+              <td>11:00 – 14:00</td>
+              <td>Maker · Python</td>
+              <td>14 – 16</td>
+              <td><span class="avail-badge avail-badge--waitlist">Waitlist</span></td>
+            </tr>
+            <tr>
+              <td>Wed</td>
+              <td>16:00 – 18:00</td>
+              <td>Code club (all levels)</td>
+              <td>7 – 16</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  <section class="cta-band">
-    <div class="container cta-band__inner reveal">
-      <div class="cta-band__text">
-        <h2 data-i18n="robotics.ctaTitle">Visit a class in session.</h2>
-        <p data-i18n="robotics.ctaLede">Saturday open hours, 11:00 to 13:00. No appointment needed.</p>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Your instructor</span>
+        <div class="instructor-block reveal">
+          <div class="instructor-photo">DB</div>
+          <div class="instructor-info">
+            <h2 class="instructor-name">David Baghdasaryan</h2>
+            <p class="instructor-role">Robotics & Coding Lead</p>
+            <p class="instructor-bio">Software engineer turned educator. David built the Polaris robotics program from nothing four years ago and has taught every child who has come through it. His approach is project-first: children build something real on day one and spend the rest of the term debugging and improving it. He believes the best way to learn engineering is to be frustrated by a problem you actually care about.</p>
+            <div class="instructor-tags">
+              <span class="skill-tag">Software engineer</span>
+              <span class="skill-tag">Python & Arduino</span>
+              <span class="skill-tag">Project-based</span>
+              <span class="skill-tag">Ages 7 – 16</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cta-band__actions">
-        <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
-        <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+    </section>
+
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-q">Does my child need any coding experience?</h3>
+            <p class="faq-a">No. The Junior track starts from zero — no assumed knowledge of code, electronics, or even computers. Children who already have some coding experience are placed in Builder or Maker based on a short assessment.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">What equipment is provided?</h3>
+            <p class="faq-a">All equipment is provided by Polaris — LEGO Mindstorms sets, Arduino kits, components, laptops, and everything else. Children bring nothing except curiosity. Equipment stays at the studio.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">How do children move between tracks?</h3>
+            <p class="faq-a">When they are genuinely ready, not when the year ends. David tracks each child's progress session by session. When a child has mastered the current level, we talk to parents and move them up — sometimes mid-term.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Is there a showcase at the end of the year?</h3>
+            <p class="faq-a">Yes — an annual public showcase in spring where children present working projects to an audience of parents and guests. Maker track students also write a short technical brief explaining their design decisions. It is one of the highlights of the Polaris year.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <div class="cta-band__text">
+          <h2 data-i18n="robotics.ctaTitle">Visit a class in session.</h2>
+          <p data-i18n="robotics.ctaLede">Saturday open hours, 11:00 to 13:00. No appointment needed.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
+          <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">

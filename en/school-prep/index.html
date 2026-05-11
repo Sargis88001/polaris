@@ -1,16 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <base href="../../">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A calm, thorough year of school readiness for ages 5 to 6.">
+  <meta name="description" content="A calm, thorough year that gets children ready for school in every sense. Ages 5 to 6.">
   <title>School Preparation | Polaris Center</title>
   <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/program-page.css">
 </head>
 <body>
 
@@ -92,42 +93,186 @@
 
   <main id="main-content">
 
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <div class="container">
+        <ol class="breadcrumb" role="list">
+          <li><a href="./">Home</a></li>
+          <li aria-current="page">School Preparation</li>
+        </ol>
+      </div>
+    </nav>
+
     <section class="page-hero">
       <div class="page-hero__bg"><img src="public/images/hero-school-prep.webp" alt="" loading="eager"></div>
       <div class="page-hero__content container">
         <span class="page-hero__badge">PROGRAMS · SCHOOL PREPARATION</span>
         <h1 class="page-hero__title" data-i18n="schoolPrep.heroTitle">Ready for school, in every sense.</h1>
         <p class="page-hero__lede" data-i18n="schoolPrep.heroLede">A calm, thorough year that gets children ready for school, not just academically but in every way.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat__num">8</span>
+            <span class="hero-stat__label">Max class size</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">1</span>
+            <span class="hero-stat__label">Focused group</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">6</span>
+            <span class="hero-stat__label">Years running</span>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="contact/" class="btn btn--primary btn--lg">Book a free trial →</a>
+          <a href="schedule/" class="btn btn--ghost-light btn--lg">View schedule</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="intro-grid reveal">
-          <div>
-            <span class="eyebrow" data-i18n="nav.schoolPrep">School Preparation</span>
-            <h2 class="section-title" data-i18n="schoolPrep.outcomesTitle">By June, every graduate has these in place</h2>
-          </div>
-          <p class="section-lede">A calm, thorough year, four mornings a week, that gets a child ready for school in every sense, not just the academic one.</p>
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">What your child will learn</span>
+          <h2 class="section-title">Everything school will assume they know.</h2>
+          <p class="section-lede">Academic skills matter, but so does everything else — the ability to focus, ask for help, and manage a long morning alongside other children.</p>
         </div>
-        <div class="outcomes-grid stagger"><article class="outcome-card"><h3>Reading readiness</h3><p>Letters, sounds, the patience to sit with a book and find the meaning inside it.</p></article><article class="outcome-card"><h3>Number sense</h3><p>Counting, comparing, basic addition and subtraction in real, hands-on contexts.</p></article><article class="outcome-card"><h3>Fine motor control</h3><p>A confident pencil grip, scissors, lacing, the small hand-skills school will assume.</p></article><article class="outcome-card"><h3>Listening and turn-taking</h3><p>The classroom skills no one teaches and every teacher hopes for.</p></article><article class="outcome-card"><h3>Self-regulation</h3><p>Naming feelings, asking for help, resolving a small disagreement without an adult.</p></article><article class="outcome-card"><h3>Curiosity, intact</h3><p>A child who walks into school still wanting to know things. The point of the whole year.</p></article>
+        <div class="learn-grid stagger">
+          <article class="learn-card">
+            <div class="learn-card__icon">🔤</div>
+            <h3 class="learn-card__title">Phonics & reading readiness</h3>
+            <p class="learn-card__desc">Letter sounds, blending, and the patience to sit with a book. Children leave able to decode simple words and understand that reading is a skill, not a mystery.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">🔢</div>
+            <h3 class="learn-card__title">Number sense & early math</h3>
+            <p class="learn-card__desc">Counting, comparing, basic addition and subtraction in hands-on, concrete contexts. Mathematical confidence built before it becomes a school subject.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">🧘</div>
+            <h3 class="learn-card__title">Self-regulation & focus</h3>
+            <p class="learn-card__desc">Naming feelings, sitting with a task, asking for help calmly. The internal skills that determine how much children can absorb on their first school day.</p>
+          </article>
+          <article class="learn-card">
+            <div class="learn-card__icon">🏫</div>
+            <h3 class="learn-card__title">Classroom skills & independence</h3>
+            <p class="learn-card__desc">Listening to instructions, taking turns, unpacking a bag, following a timetable. The practical competencies every teacher hopes for and nobody formally teaches.</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">Weekly schedule</span>
+          <h2 class="section-title">Four mornings a week, one careful year.</h2>
+        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Time</th>
+              <th>Session</th>
+              <th>Ages</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mon – Thu</td>
+              <td>09:00 – 12:30</td>
+              <td>Full year program</td>
+              <td>5 – 6</td>
+              <td><span class="avail-badge avail-badge--few">2 spots left</span></td>
+            </tr>
+            <tr>
+              <td>Fri</td>
+              <td>09:00 – 11:30</td>
+              <td>Review &amp; enrichment</td>
+              <td>5 – 6</td>
+              <td><span class="avail-badge avail-badge--few">2 spots left</span></td>
+            </tr>
+            <tr>
+              <td>Sat</td>
+              <td>10:00 – 11:30</td>
+              <td>Parent observation</td>
+              <td>5 – 6</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+            <tr>
+              <td>By appointment</td>
+              <td>14:00 – 15:00</td>
+              <td>Assessment session</td>
+              <td>5 – 6</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  <section class="cta-band">
-    <div class="container cta-band__inner reveal">
-      <div class="cta-band__text">
-        <h2 data-i18n="schoolPrep.ctaTitle">Tour the program.</h2>
-        <p data-i18n="schoolPrep.ctaLede">Come for a parent visit. We will walk you through a typical morning.</p>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Your instructor</span>
+        <div class="instructor-block reveal">
+          <div class="instructor-photo">NH</div>
+          <div class="instructor-info">
+            <h2 class="instructor-name">Narine Hovhannisyan</h2>
+            <p class="instructor-role">Lead School Preparation Teacher</p>
+            <p class="instructor-bio">Twelve years preparing children for Armenian and international schools across Yerevan. Narine works with each family at the start of the year to set clear, honest goals — and revisits them at every term report. Her graduates have entered eleven different schools in Yerevan. Every one of them was ready.</p>
+            <div class="instructor-tags">
+              <span class="skill-tag">Early years certified</span>
+              <span class="skill-tag">School readiness</span>
+              <span class="skill-tag">12 yrs experience</span>
+              <span class="skill-tag">Ages 5 – 6</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="cta-band__actions">
-        <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
-        <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+    </section>
+
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-q">Which schools do your graduates attend?</h3>
+            <p class="faq-a">Many different schools — public, private, and international. We prepare children for all of them. We do not target one school or one curriculum, because readiness is readiness.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">What if my child joins but struggles?</h3>
+            <p class="faq-a">We notice quickly and talk to you within the week. We adjust the approach, never the expectation of success. Regular short check-ins with parents are built into the year, not offered only when something goes wrong.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Is four mornings a week too much for a five-year-old?</h3>
+            <p class="faq-a">The program is specifically designed to feel manageable. Sessions have a predictable rhythm, rest built in, and no artificial pressure. Most children settle in within two weeks and ask to come on their off days.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Do you give homework?</h3>
+            <p class="faq-a">Very occasionally, short, and always optional. We might suggest a game to play at home or a book to look at together — nothing that requires a desk and a timer. The real work happens in the room.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <div class="cta-band__text">
+          <h2 data-i18n="schoolPrep.ctaTitle">Tour the program.</h2>
+          <p data-i18n="schoolPrep.ctaLede">Come for a parent visit. We will walk you through a typical morning.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
+          <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
