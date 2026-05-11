@@ -215,14 +215,14 @@ button { cursor: pointer; border: none; background: none; }
 .lang-switcher__dropdown {
   position: absolute;
   top: calc(100% + 6px);
-  right: 50%;
-  transform: translateX(50%) translateY(-6px);
+  left: 0;
+  right: 0;
+  transform: translateY(-6px);
   background: var(--color-surface-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   padding: 4px;
-  min-width: 90px;
   list-style: none;
   z-index: 200;
   opacity: 0;
@@ -231,13 +231,13 @@ button { cursor: pointer; border: none; background: none; }
 }
 .lang-switcher.is-open .lang-switcher__dropdown {
   opacity: 1;
-  transform: translateX(50%) translateY(0);
+  transform: translateY(0);
   pointer-events: auto;
 }
 .lang-btn {
   display: block;
   width: 100%;
-  padding: 6px 12px;
+  padding: 6px 10px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -247,7 +247,7 @@ button { cursor: pointer; border: none; background: none; }
   background: transparent;
   cursor: pointer;
   border: none;
-  text-align: center;
+  text-align: left;
   line-height: 1.4;
 }
 .lang-btn:hover {
