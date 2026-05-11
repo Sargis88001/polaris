@@ -1,125 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://polariscenter.am/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/"/>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-05-11</lastmod>
     <priority>1.0</priority>
   </url>
 
-  <!-- Programs -->
   <url>
-    <loc>https://polariscenter.am/programs/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/programs/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/programs/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/programs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/programs/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://polariscenter.am/en/programs/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/programs/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/programs/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.9</priority>
   </url>
 
-  <!-- Gymnastics -->
   <url>
-    <loc>https://polariscenter.am/gymnastics/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/gymnastics/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/gymnastics/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/gymnastics/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/gymnastics/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/gymnastics/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/gymnastics/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/gymnastics/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
 
-  <!-- Development -->
   <url>
-    <loc>https://polariscenter.am/development/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/development/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/development/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/development/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/development/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/development/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/development/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/development/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
 
-  <!-- English -->
   <url>
-    <loc>https://polariscenter.am/english/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/english/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/english/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/english/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/english/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/english/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/english/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/english/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
 
-  <!-- Theatre -->
   <url>
-    <loc>https://polariscenter.am/theatre/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/theatre/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/theatre/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/theatre/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/theatre/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/theatre/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/theatre/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/theatre/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
 
-  <!-- School Prep -->
   <url>
-    <loc>https://polariscenter.am/school-prep/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/school-prep/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/school-prep/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/school-prep/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/school-prep/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/school-prep/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/school-prep/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/school-prep/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
 
-  <!-- Robotics -->
   <url>
-    <loc>https://polariscenter.am/robotics/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/robotics/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/robotics/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/robotics/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/robotics/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/robotics/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/robotics/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/robotics/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.8</priority>
   </url>
 
-  <!-- About -->
   <url>
-    <loc>https://polariscenter.am/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/about/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/about/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/about/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/about/"/>
-    <changefreq>monthly</changefreq>
+    <loc>https://polariscenter.am/en/about/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/about/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/about/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.7</priority>
   </url>
 
-  <!-- Contact -->
   <url>
-    <loc>https://polariscenter.am/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/contact/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/contact/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/contact/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/contact/"/>
-    <changefreq>yearly</changefreq>
+    <loc>https://polariscenter.am/en/contact/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/contact/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/contact/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.7</priority>
   </url>
 
-  <!-- Schedule -->
   <url>
-    <loc>https://polariscenter.am/schedule/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://polariscenter.am/en/schedule/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://polariscenter.am/ru/schedule/"/>
-    <xhtml:link rel="alternate" hreflang="hy" href="https://polariscenter.am/hy/schedule/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://polariscenter.am/schedule/"/>
-    <changefreq>weekly</changefreq>
+    <loc>https://polariscenter.am/en/schedule/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/hy/schedule/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://polariscenter.am/ru/schedule/</loc>
+    <lastmod>2026-05-11</lastmod>
     <priority>0.7</priority>
   </url>
 
