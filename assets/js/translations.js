@@ -52,7 +52,7 @@ const TRANSLATIONS = {
     "kicker": "Polaris Center",
     "heroTitle": "Where children grow, {accent}, and discover.",
     "heroAccent": "learn",
-    "heroLede": "A modern center for gymnastics, English, theatre, robotics, and creative development. Six programs designed by educators who believe great teaching feels like play.",
+    "heroLede": "A modern center for gymnastics, English, theatre, robotics, and creative development.",
     "ctaPrimary": "Explore programs",
     "ctaSecondary": "Contact us",
     "statsLabel": "families learning with us this year",
