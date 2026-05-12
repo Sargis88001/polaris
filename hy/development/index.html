@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/program-page.css">
 </head>
 <body>
 
@@ -92,44 +93,71 @@
 
   <main id="main-content">
 
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <div class="container">
+        <ol class="breadcrumb" role="list">
+          <li><a href="./" data-i18n="nav.home">Home</a></li>
+          <li aria-current="page" data-i18n="nav.development">Development</li>
+        </ol>
+      </div>
+    </nav>
+
     <section class="page-hero">
       <div class="page-hero__bg"><img src="public/images/hero-development.webp" alt="" loading="eager"></div>
       <div class="page-hero__content container">
         <span class="page-hero__badge">PROGRAMS · DEVELOPMENT</span>
         <h1 class="page-hero__title" data-i18n="development.heroTitle">The first years are the foundation.</h1>
         <p class="page-hero__lede" data-i18n="development.heroLede">Cognitive and motor development for ages 3 to 7, the foundation for every program that follows.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat__num">8</span>
+            <span class="hero-stat__label">Max class size</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">3</span>
+            <span class="hero-stat__label">Age tracks</span>
+          </div>
+          <div class="hero-stat__divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__num">9</span>
+            <span class="hero-stat__label">Years running</span>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now →</a>
+          <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View schedule</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="intro-grid reveal">
-          <div>
-            <span class="eyebrow" data-i18n="nav.development">Development</span>
-            <h2 class="section-title" data-i18n="development.pillarsTitle">Four pillars of every session</h2>
-          </div>
-          <p class="section-lede">Every session at Polaris Center is built around four quiet ideas. They are not boxes to tick, they are the texture of the day.</p>
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">What your child will learn</span>
+          <h2 class="section-title">A full childhood, in four quiet strands.</h2>
+          <p class="section-lede">Each session weaves together motor, language, mathematical, and social development — so children grow on every axis, not just the measurable ones.</p>
         </div>
-        <div class="pillar-grid stagger">
-          <article class="pillar-card">
-            <span class="pillar-num">01</span>
-            <h3 data-i18n="development.pillars.0.title">Curiosity</h3>
-            <p data-i18n="development.pillars.0.text">Asking, watching, wondering. The starting point of every lesson.</p>
+        <div class="learn-grid stagger">
+          <article class="learn-card">
+            <div class="learn-card__icon">✂️</div>
+            <h3 class="learn-card__title">Fine & gross motor skills</h3>
+            <p class="learn-card__desc">Threading, cutting, climbing, balancing — physical competence built through play, without drills or pressure. Children's bodies become tools they trust.</p>
           </article>
-          <article class="pillar-card pillar-card--featured">
-            <span class="pillar-num">02</span>
-            <h3 data-i18n="development.pillars.1.title">Movement</h3>
-            <p data-i18n="development.pillars.1.text">Fine and gross motor work woven into the day, threading, cutting, climbing, balancing, without drills or pressure.</p>
+          <article class="learn-card">
+            <div class="learn-card__icon">💬</div>
+            <h3 class="learn-card__title">Language & communication</h3>
+            <p class="learn-card__desc">Stories, songs, circle conversation, and the patience to listen. Children find their voice and learn that it matters to the people around them.</p>
           </article>
-          <article class="pillar-card">
-            <span class="pillar-num">03</span>
-            <h3 data-i18n="development.pillars.2.title">Expression</h3>
-            <p data-i18n="development.pillars.2.text">Drawing, building, telling stories. Many ways to be understood.</p>
+          <article class="learn-card">
+            <div class="learn-card__icon">🔢</div>
+            <h3 class="learn-card__title">Pre-math foundations</h3>
+            <p class="learn-card__desc">Counting, sorting, comparing, and patterning through hands-on materials. Mathematical thinking emerges naturally, before numbers feel like a subject.</p>
           </article>
-          <article class="pillar-card">
-            <span class="pillar-num">04</span>
-            <h3 data-i18n="development.pillars.3.title">Together</h3>
-            <p data-i18n="development.pillars.3.text">Listening, taking turns, repairing a small disagreement. The skills of being with others.</p>
+          <article class="learn-card">
+            <div class="learn-card__icon">🤝</div>
+            <h3 class="learn-card__title">Social & emotional skills</h3>
+            <p class="learn-card__desc">Listening, taking turns, naming feelings, repairing a small disagreement. The skills of being with others that school will later assume every child has.</p>
           </article>
         </div>
       </div>
@@ -138,78 +166,113 @@
     <section class="section section--offset">
       <div class="container">
         <div class="reveal" style="max-width:640px">
-          <span class="eyebrow">The method</span>
-          <h2 class="section-title">A predictable shape, every day.</h2>
+          <span class="eyebrow">Weekly schedule</span>
+          <h2 class="section-title">Three tracks, three rhythms.</h2>
         </div>
-        <div class="method-steps stagger">
-          <div class="method-step">
-            <span class="step-label">Step 1</span>
-            <h3>Welcome circle</h3>
-            <p>A calm beginning. Names, song, today's plan. Children settle into the room.</p>
-          </div>
-          <div class="method-step">
-            <span class="step-label">Step 2</span>
-            <h3>Focused work</h3>
-            <p>A small project, a story, a puzzle. Quiet hands and quiet minds.</p>
-          </div>
-          <div class="method-step">
-            <span class="step-label">Step 3</span>
-            <h3>Active play</h3>
-            <p>Movement, music, the body remembering. Outside when the weather lets us.</p>
-          </div>
-          <div class="method-step">
-            <span class="step-label">Step 4</span>
-            <h3>Reflection</h3>
-            <p>What did we make today? What did we notice? A moment together before we go home.</p>
-          </div>
-        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Time</th>
+              <th>Group</th>
+              <th>Ages</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mon, Wed &amp; Fri</td>
+              <td>09:00 – 11:30</td>
+              <td>First Steps</td>
+              <td>3 – 4</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+            <tr>
+              <td>Mon – Fri</td>
+              <td>09:00 – 12:00</td>
+              <td>Wider World</td>
+              <td>4 – 5</td>
+              <td><span class="avail-badge avail-badge--few">2 spots left</span></td>
+            </tr>
+            <tr>
+              <td>Mon – Thu</td>
+              <td>09:00 – 12:30</td>
+              <td>Ready Hands</td>
+              <td>6 – 7</td>
+              <td><span class="avail-badge avail-badge--waitlist">Waitlist</span></td>
+            </tr>
+            <tr>
+              <td>Sat</td>
+              <td>10:00 – 11:30</td>
+              <td>Drop-in workshop</td>
+              <td>3 – 7</td>
+              <td><span class="avail-badge avail-badge--open">Spots open</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="reveal" style="max-width:640px">
-          <span class="eyebrow">Age tracks</span>
-          <h2 class="section-title">Three rooms, three rhythms.</h2>
-        </div>
-        <div class="age-grid stagger">
-          <article class="age-card">
-            <span class="age-range">3-4</span>
-            <span class="age-track-name">First steps</span>
-            <p class="age-track-desc">Two short mornings a week. Small group, lots of song, lots of movement, the gentlest first taste of structured time.</p>
-          </article>
-          <article class="age-card">
-            <span class="age-range">4-5</span>
-            <span class="age-track-name">Wider world</span>
-            <p class="age-track-desc">Three mornings. Stories, numbers in play, big art, group games. The year children begin to see themselves as learners.</p>
-          </article>
-          <article class="age-card">
-            <span class="age-range">6-7</span>
-            <span class="age-track-name">Ready hands</span>
-            <p class="age-track-desc">Four mornings. Reading and writing emerge alongside building, drawing, and talking through ideas, on the way to school.</p>
-          </article>
-        </div>
-
-        <div class="testimonial-block reveal">
-          <p class="testimonial-quote">"By December the room felt like a small village. Every child knew their place in it."</p>
-          <span class="testimonial-author">Anna M., Head of Curriculum</span>
+        <span class="eyebrow">Your instructor</span>
+        <div class="instructor-block reveal">
+          <div class="instructor-photo">AM</div>
+          <div class="instructor-info">
+            <h2 class="instructor-name">Anna Mkrtchyan</h2>
+            <p class="instructor-role">Founder · Head of Curriculum</p>
+            <p class="instructor-bio">Twelve years teaching early years. Anna trained in both Reggio Emilia and Montessori approaches and believes the best lesson plan is a calm room — one where children feel safe enough to be curious. She designed the Development curriculum herself, adjusting it every year based on what she notices in the children in front of her, not in textbooks.</p>
+            <div class="instructor-tags">
+              <span class="skill-tag">Reggio Emilia</span>
+              <span class="skill-tag">Montessori</span>
+              <span class="skill-tag">Early years certified</span>
+              <span class="skill-tag">Ages 3 – 7</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <section class="section section--offset">
+      <div class="container">
+        <div class="reveal" style="max-width:640px">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-q">My child has never been in a structured setting — is that okay?</h3>
+            <p class="faq-a">Yes. The First Steps group is specifically designed for children coming from home for the first time. Sessions are short, predictable, and very gentle. We spend the first two weeks just helping children feel safe in the room.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">What does a typical morning look like?</h3>
+            <p class="faq-a">Welcome circle, focused work (a project, puzzle, or story), active play, and a short reflection before home. The shape is the same every day — predictability is part of the method.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Can my child join mid-year?</h3>
+            <p class="faq-a">Yes, after a short settling visit. We ask new children to come for an observation morning first so the group feels familiar before day one properly begins.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Do you provide snacks?</h3>
+            <p class="faq-a">Parents bring a small morning snack from home. We ask for no sweets or heavily processed food, and no nut products due to allergies. Snack time is part of the social routine of the morning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="cta-band">
-    <div class="container cta-band__inner reveal">
-      <div class="cta-band__text">
-        <h2 data-i18n="home.ctaBandTitle">Book a free trial class.</h2>
-        <p data-i18n="home.ctaBandLede">Pick a program, send a quick note, and we will reply within one working day.</p>
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <div class="cta-band__text">
+          <h2 data-i18n="home.ctaBandTitle">Book a free trial class.</h2>
+          <p data-i18n="home.ctaBandLede">Pick a program, send a quick note, and we will reply within one working day.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
+          <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
+        </div>
       </div>
-      <div class="cta-band__actions">
-        <a href="schedule/" class="btn btn--ghost-light btn--lg" data-i18n="nav.schedule">View Schedule</a>
-        <a href="contact/" class="btn btn--primary btn--lg" data-i18n="nav.enroll">Enroll Now</a>
-      </div>
-    </div>
-  </section>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -254,7 +317,7 @@
       </div>
     </div>
     <div class="footer-bar container">
-      <span>© <span id="footerYear"></span> Polaris Center. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span>© <span id="footerYear"></span> Polaris Education Center. <span data-i18n="footer.rights">All rights reserved.</span></span>
     </div>
   </footer>
 
