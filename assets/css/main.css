@@ -5,8 +5,8 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-  --font-display: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --font-body: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
   --color-bg:              #f7f6f2;
   --color-surface:         #f9f8f5;
