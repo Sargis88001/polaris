@@ -214,6 +214,8 @@
   gap: var(--space-12);
   align-items: center;
 }
+.img-text-split__content .btn { margin-top: var(--space-6); }
+
 .img-text-split__image img {
   width: 100%;
   aspect-ratio: 4 / 3;
