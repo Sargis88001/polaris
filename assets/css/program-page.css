@@ -214,12 +214,12 @@
   gap: var(--space-12);
   align-items: center;
 }
-.img-text-split__placeholder {
+.img-text-split__image img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: var(--color-surface-offset);
+  object-fit: cover;
   border-radius: var(--radius-2xl);
-  border: 1px solid var(--color-border);
+  display: block;
 }
 @media (max-width: 768px) {
   .img-text-split { grid-template-columns: 1fr; }
