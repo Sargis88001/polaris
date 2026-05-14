@@ -161,6 +161,14 @@ button { cursor: pointer; border: none; background: none; }
 }
 .nav-item--dropdown:hover .nav-dropdown,
 .nav-item--dropdown:focus-within .nav-dropdown { display: block; }
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
 .nav-dropdown-link {
   display: block;
   padding: 10px 14px;
