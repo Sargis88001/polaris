@@ -207,6 +207,24 @@
   padding: 5px 12px;
 }
 
+/* ---------- Image + text split ---------- */
+.img-text-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+.img-text-split__placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--color-surface-offset);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border);
+}
+@media (max-width: 768px) {
+  .img-text-split { grid-template-columns: 1fr; }
+}
+
 /* ---------- FAQ list ---------- */
 .faq-list {
   max-width: 720px;
