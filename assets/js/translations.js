@@ -121,7 +121,7 @@ const TRANSLATIONS = {
   },
   "gymnastics": {
     "title": "Gymnastics",
-    "heroTitle": "Strength, balance, courage, on the mat.",
+    "heroTitle": "Gymnastics",
     "heroLede": "From first forward roll to confident competition, a real gymnastics program in central Yerevan.",
     "scheduleTitle": "Class schedule",
     "coachesTitle": "Our coaches",
@@ -131,7 +131,7 @@ const TRANSLATIONS = {
   },
   "development": {
     "title": "Creative Development",
-    "heroTitle": "The first years are the foundation.",
+    "heroTitle": "Creative Development",
     "heroLede": "Cognitive and motor development for ages 3 to 7, the foundation for every program that follows.",
     "pillarsTitle": "Four pillars of every session",
     "pillars": [
