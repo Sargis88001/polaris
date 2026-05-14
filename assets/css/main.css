@@ -136,7 +136,7 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--color-text);
 }
 .nav-link[aria-current="page"],
-.nav-link.nav-link--active { color: var(--color-text); }
+.nav-link.nav-link--active { color: #000; }
 .nav-dropdown-link[aria-current="page"],
 .nav-dropdown-link.nav-link--active {
   color: var(--color-primary);
