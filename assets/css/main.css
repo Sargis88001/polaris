@@ -729,7 +729,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 .home-hero__split {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 480px;
   gap: var(--space-12);
   align-items: center;
   width: 100%;
@@ -753,7 +753,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 @media (max-width: 1024px) {
   .home-hero__split {
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: 1fr 380px;
     gap: var(--space-8);
   }
 }
@@ -776,7 +776,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 .home-hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-size: clamp(1.75rem, 3.8vw, 3.4rem);
   font-weight: 800;
   line-height: 1.06;
   letter-spacing: -0.025em;
