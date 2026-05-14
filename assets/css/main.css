@@ -125,7 +125,7 @@ button { cursor: pointer; border: none; background: none; }
   border-radius: var(--radius-md);
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--color-text);
   transition: color var(--transition), background var(--transition);
   border: none;
   background: transparent;
@@ -133,7 +133,7 @@ button { cursor: pointer; border: none; background: none; }
   white-space: nowrap;
 }
 .nav-link:hover, .nav-link:focus-visible {
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 .nav-link[aria-current="page"],
 .nav-link.nav-link--active { color: #000; }
