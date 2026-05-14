@@ -58,7 +58,7 @@ prefixLinks();
   document.querySelectorAll('.nav-link, .nav-dropdown-link').forEach((link) => {
     if (!link.href) return;
     const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-    if (linkPath === path) {
+    if (linkPath === path && link.dataset.i18n !== 'nav.home') {
       link.setAttribute('aria-current', 'page');
       link.classList.add('nav-link--active');
     }
